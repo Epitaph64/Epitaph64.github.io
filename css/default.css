@@ -1,0 +1,126 @@
+phaser-test {
+  visibility: hidden; }
+  @media all and (min-width: 1300px) {
+    phaser-test {
+      visibility: visible; } }
+
+a {
+  color: #7a1a1a; }
+
+a:visited {
+  color: #7a1a1a; }
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 60%;
+  margin: 8px auto 16px auto;
+   }
+  @media all and (min-width: 1300px) {
+    .video-container {
+      width: 80% !important; } }
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+
+table, caption, article {
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  font-variant: inherit; }
+
+body {
+  background-color: #99a4b6;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12pt; }
+
+#sidebar {
+  max-width: 880px;
+  position: relative;
+  padding: 4px 4px 4px 8px;
+  background: #99a4b6;
+  margin-bottom: 2em;
+  margin-left: auto;
+  text-align: left;
+  height: 5em;
+   }
+  #sidebar p {
+    position: relative;
+    top: -8px;
+    color: white; }
+  #sidebar a {
+    color: white;
+    display: inline-block;
+    text-decoration: none; }
+  #sidebar a:hover {
+    text-decoration: underline;
+    color: white; }
+  #sidebar #current-page {
+    text-decoration: underline; }
+  @media all and (min-width: 1300px) {
+    #sidebar {
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      margin-left: 1em;
+      margin-top: 1em;
+      margin-bottom: 0; }
+      #sidebar #logo {
+        float: initial;
+        margin-bottom: 16px !important;
+        height: initial !important;
+        width: 140px; } }
+  #sidebar #logo {
+    float: left;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 4px;
+    margin-right: 1em; }
+
+article {
+  display: block;
+  text-align: left;
+  background-color: white;
+  max-width: 880px;
+  width: 90%;
+  margin: 2em auto;
+  padding: 1em;
+  height: auto;
+  border: 2px solid #cccccc; }
+  article h1, article h2 {
+    text-align: center; }
+  article table.about-me-table tr {
+    margin: auto auto 16px auto;
+    display: block;
+    width: 100%; }
+  article table.about-me-table tr > td {
+    align: justify;
+    max-width: 50%; }
+  article table.about-me-table tr > td:first-child {
+    width: 33%;
+    vertical-align: text-top; }
+  article p {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 16px; }
+
+
+.gist pre {
+  text-align: left; }
+
+.gist {
+  
+  width: 100%;
+  margin: initial; }
+  @media all and (min-width: 1300px) {
+    .gist {
+      width: 80% !important;
+      margin: 0 auto; } }
