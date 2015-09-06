@@ -1,1 +1,0 @@
-window.onload=function(){function e(){a.load.image("logo","/img/phaser-game/tileset.png")}function o(){a.add.tileset(a.world.centerX,a.world.centerY,"logo");logo.anchor.setTo(.5,.5),logo.width=64,logo.height=96}function t(){}var a=new Phaser.Game(800,600,Phaser.AUTO,"phaser-test",{preload:e,create:o,update:t})};
