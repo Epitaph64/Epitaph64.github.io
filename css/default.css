@@ -122,5 +122,4 @@ article {
   margin: initial; }
   @media all and (min-width: 1300px) {
     .gist {
-      width: 80% !important;
       margin: 0 auto; } }
