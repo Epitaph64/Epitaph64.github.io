@@ -159,6 +159,7 @@ pre {
   background-color: #f8f8f8; }
 
 .site-title {
+  left: 0;
   font-size: 26px;
   line-height: 56px;
   letter-spacing: -1px;
@@ -288,7 +289,10 @@ pre {
  * Posts
  */
 .post-header {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  width: 800px;
+  overflow-x: hidden;
+  margin: 0 auto; }
 
 .post-title {
   font-size: 42px;
