@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ECE 123</title>
+    <description>University of Arizona 2015</description>
+    <link>http://localhost/vteach/</link>
+    <atom:link href="http://localhost/vteach/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 14 Oct 2015 11:33:34 -0700</pubDate>
+    <lastBuildDate>Wed, 14 Oct 2015 11:33:34 -0700</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>A Brief Demonstration of the Markdown Markup Language</title>
+        <description>&lt;p&gt;Below (if you’re viewing the source of this document) is a demonstration of some of the Markdown syntax. If more fine-tuned control is required, the .markdown file containing the post can be renamed into a .html file, and the Markdown syntax will continue to work, as long as the YAML Front Matter (the content at the top of the document) remains intact.&lt;/p&gt;
+
+&lt;!-- No dedicated comment syntax, but HTML tags inline work fine. They are also stripped out by the compress.html file in /_layouts when building the site --&gt;
+
+&lt;p&gt;Easily write a list of instructions:&lt;/p&gt;
+
+&lt;h1 id=&quot;pedantic-lightbulb-replacement-instructions&quot;&gt;Pedantic Lightbulb Replacement Instructions:&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Find the switch controlling the affected site and switch it off.&lt;/li&gt;
+  &lt;li&gt;Remove the destroyed bulb from its holder by unscrewing it in a series of counter-clockwise gentle rotations.&lt;/li&gt;
+  &lt;li&gt;Place a fresh bulb in the socket (reversing the movement used to remove the last bulb.)&lt;/li&gt;
+  &lt;li&gt;Reverse the instructions you followed after finding the switch in step 1.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;a-simple-bulleted-list&quot;&gt;A simple bulleted list.&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Item A&lt;/li&gt;
+  &lt;li&gt;Item B&lt;/li&gt;
+  &lt;li&gt;Item C&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A nested list structure:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Chess Trivia
+    &lt;ul&gt;
+      &lt;li&gt;Chess Pieces
+        &lt;ol&gt;
+          &lt;li&gt;King&lt;/li&gt;
+          &lt;li&gt;Queen&lt;/li&gt;
+          &lt;li&gt;Bishop&lt;/li&gt;
+          &lt;li&gt;Knight&lt;/li&gt;
+          &lt;li&gt;Rook&lt;/li&gt;
+          &lt;li&gt;Pawn&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Common Openings
+        &lt;ul&gt;
+          &lt;li&gt;Two Knights&lt;/li&gt;
+          &lt;li&gt;Ruy Lopez&lt;/li&gt;
+          &lt;li&gt;King’s Gambit&lt;/li&gt;
+          &lt;li&gt;Caro-Kann&lt;/li&gt;
+          &lt;li&gt;Sicilian Defense&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Here’s a &lt;a href=&quot;../../../../&quot;&gt;relative link&lt;/a&gt; to the root of the site followed by a &lt;a href=&quot;http://www.google.com/&quot;&gt;referenced link&lt;/a&gt; to an external site.&lt;/p&gt;
+
+&lt;p&gt;Here’s one way to &lt;strong&gt;bold text&lt;/strong&gt; and &lt;em&gt;italicize text&lt;/em&gt;.
+An alternative way to &lt;strong&gt;emphasize&lt;/strong&gt; text is using &lt;em&gt;this&lt;/em&gt; syntax.
+These last couple of sentences have no line breaks due to the lack of a blank line between them.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Use ‘&amp;gt;’ to begin a blockquote element around the text which appears after.
+Leave a completely blank line to end the blockquote. To have text on multiple lines
+within a blockquote, simply use the &amp;lt;br&amp;gt; tag.&lt;br /&gt;&lt;br /&gt;This text appears two lines down
+within the blockquote.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This text appears outside of the blockquote.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Three or more hyphens separated by two blank lines indicates a horizontal rule as seen above.&lt;/p&gt;
+
+&lt;p&gt;Headers are created by preprending a quantity of # symbols before the line of text to indicate the rank.
+1 is the largest and 6 is the smallest.&lt;/p&gt;
+
+&lt;h1 id=&quot;heres-the-largest-header&quot;&gt;Here’s the largest header&lt;/h1&gt;
+
+&lt;h6 id=&quot;heres-the-smallest-header&quot;&gt;Here’s the smallest header&lt;/h6&gt;
+
+&lt;p&gt;These can of course be styled via the .scss files as desired.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/vteach/images/castle.jpg&quot; alt=&quot;Edinburgh Castle&quot; /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;caption&quot;&gt;This is an image of Edinburgh Castle.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 13 Oct 2015 16:06:05 -0700</pubDate>
+        <link>http://localhost/vteach/demo/2015/10/13/example-markdown.html</link>
+        <guid isPermaLink="true">http://localhost/vteach/demo/2015/10/13/example-markdown.html</guid>
+        
+        
+        <category>demo</category>
+        
+      </item>
+    
+      <item>
+        <title>Another Post</title>
+        <description>&lt;p&gt;Just another post for demo purposes.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 13 Oct 2015 00:00:00 -0700</pubDate>
+        <link>http://localhost/vteach/demo/2015/10/13/another-post.html</link>
+        <guid isPermaLink="true">http://localhost/vteach/demo/2015/10/13/another-post.html</guid>
+        
+        
+        <category>demo</category>
+        
+      </item>
+    
+      <item>
+        <title>Welcome to ECE 123</title>
+        <description>&lt;p&gt;Have a seat and we’ll get started soon!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 11 Oct 2015 14:40:03 -0700</pubDate>
+        <link>http://localhost/vteach/demo/introduction/2015/10/11/welcome-class.html</link>
+        <guid isPermaLink="true">http://localhost/vteach/demo/introduction/2015/10/11/welcome-class.html</guid>
+        
+        
+        <category>demo</category>
+        
+        <category>introduction</category>
+        
+      </item>
+    
+  </channel>
+</rss>
