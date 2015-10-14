@@ -281,7 +281,7 @@ pre {
   font-size: 14px;
   color: #828282;
   position: relative;
-  top: -10px; }
+  top: -8px; }
 
 .post-link {
   display: block;
@@ -323,7 +323,8 @@ pre {
         font-size: 18px; } }
 
 .centered {
-  text-align: center; }
+  text-align: center;
+  margin: 0 auto; }
 
 /**
  * Syntax highlighting styles
