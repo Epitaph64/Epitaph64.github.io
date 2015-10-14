@@ -291,6 +291,7 @@ pre {
  * Posts
  */
 .post-header {
+  word-wrap: break-word;
   margin-bottom: 30px;
   width: 800px;
   overflow-x: hidden;
