@@ -1,3 +1,7 @@
+html {
+	overflow-y: scroll;
+}
+
 phaser-test {
   visibility: hidden; }
   @media all and (min-width: 1300px) {
