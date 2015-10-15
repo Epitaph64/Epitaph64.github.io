@@ -5,8 +5,8 @@
     <description>University of Arizona 2015</description>
     <link>http://e64.us/vteach/</link>
     <atom:link href="http://e64.us/vteach/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 14 Oct 2015 15:18:53 -0700</pubDate>
-    <lastBuildDate>Wed, 14 Oct 2015 15:18:53 -0700</lastBuildDate>
+    <pubDate>Wed, 14 Oct 2015 21:15:16 -0700</pubDate>
+    <lastBuildDate>Wed, 14 Oct 2015 21:15:16 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -17,7 +17,7 @@
 
 &lt;p&gt;Easily write a list of instructions:&lt;/p&gt;
 
-&lt;h1 id=&quot;pedantic-lightbulb-replacement-instructions&quot;&gt;Pedantic Lightbulb Replacement Instructions:&lt;/h1&gt;
+&lt;h2 id=&quot;pedantic-lightbulb-replacement-instructions&quot;&gt;Pedantic Lightbulb Replacement Instructions:&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Find the switch controlling the affected site and switch it off.&lt;/li&gt;
@@ -26,7 +26,7 @@
   &lt;li&gt;Reverse the instructions you followed after finding the switch in step 1.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h1 id=&quot;a-simple-bulleted-list&quot;&gt;A simple bulleted list.&lt;/h1&gt;
+&lt;h2 id=&quot;a-simple-bulleted-list&quot;&gt;A simple bulleted list.&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Item A&lt;/li&gt;
@@ -34,7 +34,7 @@
   &lt;li&gt;Item C&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;A nested list structure:&lt;/p&gt;
+&lt;h2 id=&quot;a-nested-list-structure&quot;&gt;A nested list structure:&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Chess Trivia
@@ -82,11 +82,9 @@ within the blockquote.&lt;/p&gt;
 &lt;p&gt;Three or more hyphens separated by two blank lines indicates a horizontal rule as seen above.&lt;/p&gt;
 
 &lt;p&gt;Headers are created by preprending a quantity of # symbols before the line of text to indicate the rank.
-1 is the largest and 6 is the smallest.&lt;/p&gt;
+1 is the largest and 6 is the smallest. Ex: ## for a h2&lt;/p&gt;
 
-&lt;h1 id=&quot;heres-the-largest-header&quot;&gt;Here’s the largest header&lt;/h1&gt;
-
-&lt;h6 id=&quot;heres-the-smallest-header&quot;&gt;Here’s the smallest header&lt;/h6&gt;
+&lt;h2 id=&quot;header-2&quot;&gt;Header 2&lt;/h2&gt;
 
 &lt;p&gt;These can of course be styled via the .scss files as desired.&lt;/p&gt;
 
