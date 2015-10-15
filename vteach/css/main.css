@@ -174,7 +174,8 @@ html {
 
 .site-nav {
   float: right;
-  line-height: 56px; }
+  line-height: 56px;
+  z-index: 999; }
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
