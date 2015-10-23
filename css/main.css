@@ -305,9 +305,9 @@ html {
   .post-meta p {
     display: inline-block;
     margin-bottom: 0.25em; }
-  .post-meta p:not(:last-child) {
-    padding-right: 0.75em;
-    border-right: 0.1em solid #99b2ca; }
+  .post-meta p:not(:last-child):after {
+    margin-left: 0.75em;
+    content: "|"; }
   .post-meta p:not(:first-child) {
     padding-left: 0.5em; }
 
