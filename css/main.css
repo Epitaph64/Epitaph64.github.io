@@ -79,8 +79,8 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: #aaa;
-  border-left: 4px solid #b7b7b7;
+  color: #88a5c1;
+  border-left: 4px solid #99b2ca;
   padding-left: 15px;
   font-size: 18px;
   letter-spacing: -1px;
@@ -94,7 +94,7 @@ blockquote {
 pre,
 code {
   font-size: 15px;
-  border: 1px solid #b7b7b7;
+  border: 1px solid #99b2ca;
   border-radius: 3px; }
 
 code {
@@ -142,7 +142,7 @@ pre {
   height: 16px;
   vertical-align: middle; }
   .icon > svg path {
-    fill: #aaa; }
+    fill: #88a5c1; }
 
 .book-title {
   font-weight: bold; }
@@ -165,8 +165,8 @@ html {
  * Site header
  */
 .site-header {
-  border-top: 0.33em solid #6a6a6a;
-  border-bottom: 0.22em solid #6a6a6a;
+  border-top: 0.33em solid #456584;
+  border-bottom: 0.22em solid #456584;
   min-height: 56px;
   position: relative;
   background-color: #1a1a1a; }
@@ -229,7 +229,7 @@ html {
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid #b7b7b7;
+  border-top: 1px solid #99b2ca;
   padding: 30px 0; }
 
 .footer-heading {
@@ -243,7 +243,7 @@ html {
 
 .footer-col-wrapper {
   font-size: 15px;
-  color: #aaa;
+  color: #88a5c1;
   margin-left: -15px; }
 
 .footer-col {
@@ -294,7 +294,7 @@ html {
 
 .post-meta {
   font-size: 0.875em;
-  color: #aaa;
+  color: #88a5c1;
   position: relative;
   top: -1em; }
   .post-meta p {
@@ -302,7 +302,7 @@ html {
     margin-bottom: 0.25em; }
   .post-meta p:not(:last-child) {
     padding-right: 0.75em;
-    border-right: 0.1em solid #b7b7b7; }
+    border-right: 0.1em solid #99b2ca; }
   .post-meta p:not(:first-child) {
     padding-left: 0.5em; }
 
