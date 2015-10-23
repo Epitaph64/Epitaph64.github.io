@@ -665,12 +665,3 @@ green     #859900  operators, other keywords
   color: #2aa198; }
 
 /* Literal.Number.Integer.Long */
-p.caption {
-  text-align: center;
-  position: relative;
-  color: white; }
-
-img {
-  display: block;
-  clear: both;
-  margin: 0 auto; }
