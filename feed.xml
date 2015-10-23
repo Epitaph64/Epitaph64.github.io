@@ -5,21 +5,23 @@
     <description>The website of Epitaph64 / Walter Macfarland.</description>
     <link>http://e64.us/</link>
     <atom:link href="http://e64.us/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 22 Oct 2015 22:29:40 -0700</pubDate>
-    <lastBuildDate>Thu, 22 Oct 2015 22:29:40 -0700</lastBuildDate>
+    <pubDate>Thu, 22 Oct 2015 22:35:36 -0700</pubDate>
+    <lastBuildDate>Thu, 22 Oct 2015 22:35:36 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
-        <title>Blog Redesign</title>
+        <title>Website Redesign</title>
         <description>&lt;p&gt;I’ve gone ahead and decided to start using Jekyll to work on my blog. Although there were
 a few hitches in getting it setup, I am really enjoying using Markdown and the Liquid Templating language.
 Although the site is being compiled to static HTML to be served on Github, it almost feels
 like I am working on a dynamic site due to the power of the included technologies in the framework.&lt;/p&gt;
 </description>
         <pubDate>Thu, 22 Oct 2015 12:31:00 -0700</pubDate>
-        <link>http://e64.us/blog/2015/10/22/new-blog.html</link>
-        <guid isPermaLink="true">http://e64.us/blog/2015/10/22/new-blog.html</guid>
+        <link>http://e64.us/website/blog/2015/10/22/new-blog.html</link>
+        <guid isPermaLink="true">http://e64.us/website/blog/2015/10/22/new-blog.html</guid>
         
+        
+        <category>website</category>
         
         <category>blog</category>
         

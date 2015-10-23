@@ -313,7 +313,8 @@ html {
 
 .post-link {
   display: block;
-  font-size: 24px; }
+  font-size: 24px;
+  color: #aabed2 !important; }
 
 /**
  * Posts
