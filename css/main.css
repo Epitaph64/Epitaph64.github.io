@@ -67,10 +67,10 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: #6B8FB2;
+  color: #88a5c1;
   text-decoration: none; }
   a:visited {
-    color: #6B8FB2; }
+    color: #88a5c1; }
   a:hover {
     color: #ccc;
     text-decoration: underline; }
@@ -79,8 +79,8 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: #6B8FB2;
-  border-left: 4px solid #7c9cbb;
+  color: #aaa;
+  border-left: 4px solid #b7b7b7;
   padding-left: 15px;
   font-size: 18px;
   letter-spacing: -1px;
@@ -94,7 +94,7 @@ blockquote {
 pre,
 code {
   font-size: 15px;
-  border: 1px solid #7c9cbb;
+  border: 1px solid #b7b7b7;
   border-radius: 3px; }
 
 code {
@@ -142,7 +142,7 @@ pre {
   height: 16px;
   vertical-align: middle; }
   .icon > svg path {
-    fill: #6B8FB2; }
+    fill: #aaa; }
 
 .book-title {
   font-weight: bold; }
@@ -165,8 +165,8 @@ html {
  * Site header
  */
 .site-header {
-  border-top: 0.33em solid #364f68;
-  border-bottom: 0.22em solid #364f68;
+  border-top: 0.33em solid #6a6a6a;
+  border-bottom: 0.22em solid #6a6a6a;
   min-height: 56px;
   position: relative;
   background-color: #1a1a1a; }
@@ -178,9 +178,9 @@ html {
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
-  color: #6B8FB2; }
+  color: #88a5c1; }
   .site-title, .site-title:visited {
-    color: #6B8FB2; }
+    color: #88a5c1; }
 
 .site-nav {
   float: right;
@@ -189,7 +189,7 @@ html {
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
-    color: #6B8FB2;
+    color: #88a5c1;
     line-height: 1.5; }
     .site-nav .page-link:not(:first-child) {
       margin-left: 20px; }
@@ -199,7 +199,7 @@ html {
       top: 9px;
       right: 30px;
       background-color: #333;
-      border: 1px solid #6B8FB2;
+      border: 1px solid #88a5c1;
       border-radius: 5px;
       text-align: right; }
       .site-nav .menu-icon {
@@ -214,7 +214,7 @@ html {
           width: 18px;
           height: 15px; }
           .site-nav .menu-icon > svg path {
-            fill: #6B8FB2; }
+            fill: #88a5c1; }
       .site-nav .trigger {
         clear: both;
         display: none; }
@@ -229,7 +229,7 @@ html {
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid #7c9cbb;
+  border-top: 1px solid #b7b7b7;
   padding: 30px 0; }
 
 .footer-heading {
@@ -243,7 +243,7 @@ html {
 
 .footer-col-wrapper {
   font-size: 15px;
-  color: #6B8FB2;
+  color: #aaa;
   margin-left: -15px; }
 
 .footer-col {
@@ -294,7 +294,7 @@ html {
 
 .post-meta {
   font-size: 0.875em;
-  color: #6B8FB2;
+  color: #aaa;
   position: relative;
   top: -1em; }
   .post-meta p {
@@ -302,7 +302,7 @@ html {
     margin-bottom: 0.25em; }
   .post-meta p:not(:last-child) {
     padding-right: 0.75em;
-    border-right: 0.1em solid #7c9cbb; }
+    border-right: 0.1em solid #b7b7b7; }
   .post-meta p:not(:first-child) {
     padding-left: 0.5em; }
 
