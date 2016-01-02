@@ -63,6 +63,9 @@ ul, ol {
 li > ul,
 li > ol {
   margin-bottom: 0; }
+li a:hover {
+  text-decoration: none;
+  color: #eeeeee; }
 
 /**
  * Headings
@@ -78,7 +81,7 @@ a {
   color: #e36c0a;
   text-decoration: none; }
   a:hover {
-    color: #bbb;
+    color: #eeeeee;
     text-decoration: underline; }
 
 /**
@@ -168,16 +171,6 @@ input[type="submit"], [type="radio"], [type="button"], select {
 
 input[type="submit"]:hover {
   background-color: #f6862a; }
-
-.home-info-table {
-  table-layout: fixed; }
-  @media screen and (max-width: 600px) {
-    .home-info-table {
-      font-size: 14px; } }
-  .home-info-table td:first-child {
-    width: 25%;
-    color: #e36c0a;
-    vertical-align: top; }
 
 /**
  * Site header
