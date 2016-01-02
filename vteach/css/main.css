@@ -68,7 +68,8 @@ li > ol {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 300; }
+  font-weight: 300;
+  color: #e36c0a; }
 
 /**
  * Links
@@ -172,7 +173,7 @@ input[type="submit"]:hover {
   table-layout: fixed; }
   @media screen and (max-width: 600px) {
     .home-info-table {
-      font-size: 12.8px; } }
+      font-size: 14px; } }
   .home-info-table td:first-child {
     width: 25%;
     color: #e36c0a;
@@ -312,9 +313,12 @@ input[type="submit"]:hover {
 
 .post-meta {
   font-size: 14px;
-  color: #bbb;
+  color: #a2a2a2;
   position: relative;
   top: -16px; }
+  @media screen and (max-width: 800px) {
+    .post-meta {
+      color: #bbb; } }
 
 .post-link {
   display: block;
