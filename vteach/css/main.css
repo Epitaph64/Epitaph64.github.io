@@ -309,16 +309,14 @@ input[type="submit"]:hover {
   margin-left: 0;
   list-style: none; }
   .post-list > li {
-    margin-bottom: 30px; }
+    margin-bottom: 15px; }
 
 .post-meta {
   font-size: 14px;
   color: #a2a2a2;
   position: relative;
-  top: -16px; }
-  @media screen and (max-width: 800px) {
-    .post-meta {
-      color: #bbb; } }
+  top: -16px;
+  margin-bottom: 0; }
 
 .post-link {
   display: block;
@@ -354,6 +352,17 @@ input[type="submit"]:hover {
     @media screen and (max-width: 800px) {
       .post-content h4 {
         font-size: 18px; } }
+
+/* Home Page Table Styling */
+.two-col-info-table {
+  table-layout: fixed; }
+  @media screen and (max-width: 600px) {
+    .two-col-info-table {
+      font-size: 14px; } }
+  .two-col-info-table td:first-child {
+    width: 25%;
+    color: #e36c0a;
+    vertical-align: top; }
 
 .centered {
   text-align: center;
