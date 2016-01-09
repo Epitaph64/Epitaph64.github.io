@@ -5,9 +5,39 @@
     <description>The website/blog of Epitaph64 / Enzor.</description>
     <link>http://e64.us/</link>
     <atom:link href="http://e64.us/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 23 Oct 2015 09:57:47 -0700</pubDate>
-    <lastBuildDate>Fri, 23 Oct 2015 09:57:47 -0700</lastBuildDate>
-    <generator>Jekyll v2.5.3</generator>
+    <pubDate>Fri, 08 Jan 2016 21:17:02 -0700</pubDate>
+    <lastBuildDate>Fri, 08 Jan 2016 21:17:02 -0700</lastBuildDate>
+    <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Engineering Class Website Complete!</title>
+        <description>&lt;h4 id=&quot;the-deliverables&quot;&gt;The Deliverables&lt;/h4&gt;
+
+&lt;p&gt;While some additional features remain to be worked on, the launch version of the ECE 535
+class website has been deployed and is operational at &lt;a href=&quot;http://www2.engr.arizona.edu/~vasicteach/teaching/ece535a/&quot;&gt;this location&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h4 id=&quot;backstory&quot;&gt;Backstory&lt;/h4&gt;
+
+&lt;p&gt;My friend, and boss Bane Vasić came to me a couple of months ago requesting a redesign for his class website before the upcoming semester. Having just learned Jekyll for use in my own personal website (which you’re hopefully reading this post on right now), I suggested it after determining that there would be no immediate need for a database and convincing him that he would be able to learn the YML and Markdown languages without much difficulty.&lt;/p&gt;
+
+&lt;p&gt;After gaining his approval I set off and built a basic prototype to show how the site could be organized using the stock layout, and how I could modify it to fit the requirements of the project. We had a few issues with the first prototypes and getting them to build on his system. However, after some coaxing we were able to get the site to build on both of our machines and all was well. Despite the initial rocky sell on the framework, we decided to press forward as the results we had seen looked promising.&lt;/p&gt;
+
+&lt;p&gt;After that I spent a week or so porting over the content he wished to reuse from a past iteration of the class, and then organized the site’s data in YML data files in order to make the site easy to edit in the future. I also worked on writing a collection of bash scripts to create a new post, deploy the site using rsync, and various other administrative tasks that will be involved in running the site.&lt;/p&gt;
+
+&lt;h4 id=&quot;summary&quot;&gt;Summary&lt;/h4&gt;
+
+&lt;p&gt;Overall, I had a good experience with Jeyll and have learned many things which I will surely make use of in improving my own site in the future. Additionally, I have even begun lurking Jekyll’s GitHub page to see what types of features are being worked on. Perhaps I may even try to contribute in the future!&lt;/p&gt;
+</description>
+        <pubDate>Fri, 08 Jan 2016 13:32:11 -0700</pubDate>
+        <link>http://e64.us/website/project/2016/01/08/project-complete-engr-website.html</link>
+        <guid isPermaLink="true">http://e64.us/website/project/2016/01/08/project-complete-engr-website.html</guid>
+        
+        
+        <category>website</category>
+        
+        <category>project</category>
+        
+      </item>
     
       <item>
         <title>Website Redesign</title>
