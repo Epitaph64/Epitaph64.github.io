@@ -157,7 +157,8 @@ table.two-td {
   margin-bottom: 1em; }
   table.two-td td:first-child {
     width: 33%;
-    text-align: center; }
+    text-align: center;
+    vertical-align: top; }
   table.two-td td:not(:last-child) {
     padding-right: 2em; }
   table.two-td td {
