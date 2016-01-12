@@ -20,8 +20,13 @@ var PIECE_GREEN = 0x00FF00;
 var PIECE_BLUE = 0x0000FF;
 
 // SFX
-var SOUND_POP = new Audio('sfx/click.wav');
-var SOUND_CLEAR = new Audio('sfx/clear.wav');
+var SOUND_POP = new Howl({
+  urls: ['sfx/click.wav']
+});
+
+var SOUND_CLEAR = new Howl({
+  urls: ['sfx/clear.wav']
+});
 
 function generateMap(level) {
   for (var i = 0; i < dimension; i++) {
@@ -146,8 +151,7 @@ graphics.click = function(data) {
   // Player clicks piece
   if (canClick && grid[cy][cx].type != PIECE_EMPTY) {
     canClick = false;
-    SOUND_POP.pause();
-    SOUND_POP.currentTime = 0;
+    SOUND_POP.stop();
     var piecesRemoved = floodFill(cy, cx, grid[cy][cx].type);
     piecesLeft -= piecesRemoved;
     if (piecesRemoved <= 16) {
