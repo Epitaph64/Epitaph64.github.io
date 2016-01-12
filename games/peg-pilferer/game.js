@@ -11,6 +11,7 @@ var dimension = 4;
 var level = 1;
 var piecesLeft = 0;
 var score = bigInt();
+var fallingOffset = 0;
 
 // Pieces
 var PIECE_EMPTY = 0x000000;
@@ -27,8 +28,11 @@ function generateMap(level) {
     if (!grid[i])
       grid[i] = [];
     for (var j = 0; j < dimension; j++) {
-      grid[i][j] = Math.floor(Math.random() * 4);
-      if (grid[i][j] != 0) {
+      if (!grid[i][j])
+        grid[i][j] = [];
+      grid[i][j].type = Math.floor(Math.random() * 4);
+      if (grid[i][j].type != 0) {
+        grid[i][j].falling = false;
         piecesLeft += 1;
       }
     }
@@ -67,9 +71,14 @@ function redrawGrid() {
   graphics.clear();
   for (var y = 0; y < dimension; y++) {
     for (var x = 0; x < dimension; x++) {
-      if (grid[y][x] != 0) {
-        graphics.beginFill(getNodeColor(grid[y][x]));
-        graphics.drawCircle(40 + x * 40, 40 + y * 40, 16); // drawCircle(x, y, radius)
+      if (grid[y][x].type != 0) {
+        graphics.beginFill(getNodeColor(grid[y][x].type));
+        if (grid[y][x].falling) {
+          graphics.drawCircle(40 + x * 40, 40 + y * 40 - fallingOffset, 16); // drawCircle(x, y, radius)
+        } else {
+          graphics.drawCircle(40 + x * 40, 40 + y * 40, 16); // drawCircle(x, y, radius)
+        }
+
         graphics.endFill();
       }
     }
@@ -98,28 +107,28 @@ container.addChild(scoreText);
 
 function floodFill(y, x, c) {
   var n = 1;
-  grid[y][x] = PIECE_EMPTY;
+  grid[y][x].type = PIECE_EMPTY;
 
   if (x - 1 >= 0) {
-    if (grid[y][x - 1] == c) {
+    if (grid[y][x - 1].type == c) {
       n += floodFill(y, x - 1, c);
     }
   }
 
   if (x + 1 < dimension) {
-    if (grid[y][x + 1] == c) {
+    if (grid[y][x + 1].type == c) {
       n += floodFill(y, x + 1, c);
     }
   }
 
   if (y - 1 >= 0) {
-    if (grid[y - 1][x] == c) {
+    if (grid[y - 1][x].type == c) {
       n += floodFill(y - 1, x, c);
     }
   }
 
   if (y + 1 < dimension) {
-    if (grid[y + 1][x] == c) {
+    if (grid[y + 1][x].type == c) {
       n += floodFill(y + 1, x, c);
     }
   }
@@ -135,10 +144,10 @@ graphics.click = function(data) {
   if (cx < 0 || cy < 0 || cx >= dimension || cy >= dimension) return;
 
   // Player clicks piece
-  if (canClick && grid[cy][cx] != PIECE_EMPTY) {
+  if (canClick && grid[cy][cx].type != PIECE_EMPTY) {
     canClick = false;
     SOUND_POP.play();
-    var piecesRemoved = floodFill(cy, cx, grid[cy][cx]);
+    var piecesRemoved = floodFill(cy, cx, grid[cy][cx].type);
     piecesLeft -= piecesRemoved;
     if (piecesRemoved <= 16) {
       score = score.add(bigInt(2).pow(piecesRemoved));
@@ -173,9 +182,11 @@ function applyGravity() {
   for (var x = 0; x < dimension; x++) {
     for (var y = dimension - 1; y > 0; y--) {
 
-      if (grid[y - 1][x] != PIECE_EMPTY && grid[y][x] == PIECE_EMPTY) {
-        grid[y][x] = grid[y - 1][x];
-        grid[y - 1][x] = PIECE_EMPTY;
+      if (grid[y - 1][x].type != PIECE_EMPTY && grid[y][x].type == PIECE_EMPTY) {
+        grid[y][x].type = grid[y - 1][x].type;
+        grid[y][x].falling = true;
+        grid[y - 1][x].type = PIECE_EMPTY;
+        fallingOffset = 40;
       }
     }
   }
@@ -184,8 +195,22 @@ function applyGravity() {
 function animate() {
   if (clock % 10 == 0) {
     applyGravity();
-    redrawGrid();
   }
+
+  if (fallingOffset > 0) {
+    fallingOffset -= 4;
+    if (fallingOffset == 0) {
+      for (var y = 0; y < dimension; y++) {
+        for (var x = 0; x < dimension; x++) {
+          if (grid[y][x].falling) {
+            grid[y][x].falling = false;
+          }
+        }
+      }
+    }
+  }
+
+  redrawGrid();
 
   mx = renderer.plugins.interaction.mouse.global.x;
   my = renderer.plugins.interaction.mouse.global.y;
