@@ -8,24 +8,28 @@ var grid = [];
 var clock = 0;
 var clear = 0;
 var dimension = 4;
-var level = 1;
-var piecesLeft = 0;
+
 var score = bigInt();
 var fallingOffset = 0;
+
+var level = 1;
+var piecesLeft = 0;
+var gemTypes = 3;
 
 // Pieces
 var PIECE_EMPTY = 0x000000;
 var PIECE_RED = 0xFF0000;
 var PIECE_GREEN = 0x00FF00;
 var PIECE_BLUE = 0x0000FF;
+var PIECE_CYAN = 0x32FDFF;
 
 // SFX
 var SOUND_POP = new Howl({
-  urls: ['sfx/click.wav']
+  urls: ['sfx/click.wav'],
 });
 
 var SOUND_CLEAR = new Howl({
-  urls: ['sfx/clear.wav']
+  urls: ['sfx/clear.wav'],
 });
 
 function generateMap(level) {
@@ -35,7 +39,16 @@ function generateMap(level) {
     for (var j = 0; j < dimension; j++) {
       if (!grid[i][j])
         grid[i][j] = [];
-      grid[i][j].type = Math.floor(Math.random() * 4);
+      if (gemTypes == 3 && level > dimension) {
+        gemTypes = 4;
+      }
+
+      if (Math.random() > 0.2) {
+        grid[i][j].type = Math.floor(Math.random() * gemTypes) + 1;
+      } else {
+        grid[i][j].type = 0;
+      }
+
       if (grid[i][j].type != 0) {
         grid[i][j].falling = false;
         piecesLeft += 1;
@@ -67,6 +80,9 @@ function getNodeColor(r) {
       break;
     case 3:
       color = PIECE_BLUE;
+      break;
+    case 4:
+      color = PIECE_CYAN;
       break;
   }
   return color;
@@ -165,6 +181,7 @@ graphics.click = function(data) {
     }
 
     if (piecesLeft == 0) {
+      level += 1;
       dimension += 1;
       if (dimension > 14) dimension = 14;
       generateMap(level);
