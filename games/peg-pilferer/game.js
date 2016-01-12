@@ -25,8 +25,6 @@ var PIECE_SETS = [
 
 var PIECES = PIECE_SETS[0];
 
-//
-
 // SFX
 var SOUND_POP = new Howl({
   urls: ['sfx/click.wav'],
@@ -101,20 +99,37 @@ var title = new PIXI.Text('', {
   fill: 'lime',
 });
 
-title.text = 'Peg Pilferer';
-title.position.x = renderer.width - 180;
+title.text = 'Peg Pilferer [v 0.2]';
+title.position.x = renderer.width - 200;
 title.position.y = 20;
 container.addChild(title);
 
-var scoreText = new PIXI.Text('', {
+var levelText = new PIXI.Text('L: ' + level, {
   font: '20px Times New Roman',
   fill: 'lime',
 });
 
-scoreText.text = '' + score;
-scoreText.position.x = renderer.width - 180;
+levelText.position.x = renderer.width - 200;
+levelText.position.y = 80;
+container.addChild(levelText);
+
+var scoreText = new PIXI.Text('S: ' + score, {
+  font: '20px Times New Roman',
+  fill: 'lime',
+});
+
+scoreText.position.x = renderer.width - 200;
 scoreText.position.y = 60;
 container.addChild(scoreText);
+
+var creditText = new PIXI.Text('E64', {
+  font: '20px Times New Roman',
+  fill: 'lime',
+});
+
+creditText.position.x = renderer.width - 200;
+creditText.position.y = renderer.height - 50;
+container.addChild(creditText);
 
 function floodFill(y, x, c) {
   var n = 1;
@@ -172,6 +187,7 @@ graphics.click = function(data) {
 
     if (piecesLeft == 0) {
       level += 1;
+      levelText.text = 'L: ' + level;
       dimension += 1;
       if (dimension > maxDimension) dimension = maxDimension;
       generateMap(level);
@@ -180,7 +196,7 @@ graphics.click = function(data) {
       SOUND_POP.play();
     }
 
-    scoreText.text = '' + score;
+    scoreText.text = 'S: ' + score;
     redrawGrid();
 
     canClick = true;
