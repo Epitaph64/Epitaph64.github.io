@@ -142,8 +142,12 @@ graphics.click = function(data) {
     piecesLeft -= piecesRemoved;
     if (piecesRemoved <= 16) {
       score = score.add(bigInt(2).pow(piecesRemoved));
-    } else {
+    } else if (piecesRemoved <= 32) {
       score = score.add(bigInt(65536).add(bigInt(10000).multiply(piecesRemoved)));
+    } else if (piecesRemoved <= 64) {
+      score = score.add(bigInt(225536).add(bigInt(100000).multiply(piecesRemoved)));
+    } else {
+      score = score.add(bigInt(3425536).add(bigInt(1000000).multiply(piecesRemoved)));
     }
 
     if (piecesLeft == 0) {
