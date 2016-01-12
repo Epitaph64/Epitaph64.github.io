@@ -8,6 +8,7 @@ var grid = [];
 var clock = 0;
 var clear = 0;
 var dimension = 4;
+var maxDimension = 14;
 
 var score = bigInt();
 var fallingOffset = 0;
@@ -17,11 +18,14 @@ var piecesLeft = 0;
 var gemTypes = 3;
 
 // Pieces
-var PIECE_EMPTY = 0x000000;
-var PIECE_RED = 0xFF0000;
-var PIECE_GREEN = 0x00FF00;
-var PIECE_BLUE = 0x0000FF;
-var PIECE_CYAN = 0x32FDFF;
+var PIECE_SETS = [
+  [0x00000, 0xFF0000, 0x00FF00, 0x0000FF, 0xFFFF33],
+  [0x000000, 0xe18b45, 0x89e46a, 0x649ce2, 0x7d5b7a],
+];
+
+var PIECES = PIECE_SETS[0];
+
+//
 
 // SFX
 var SOUND_POP = new Howl({
@@ -33,15 +37,20 @@ var SOUND_CLEAR = new Howl({
 });
 
 function generateMap(level) {
+  if (gemTypes == 3 && level == maxDimension) {
+    gemTypes = 4;
+  }
+
+  if (level == maxDimension + 4) {
+    PIECES = PIECE_SETS[1];
+  }
+
   for (var i = 0; i < dimension; i++) {
     if (!grid[i])
       grid[i] = [];
     for (var j = 0; j < dimension; j++) {
       if (!grid[i][j])
         grid[i][j] = [];
-      if (gemTypes == 3 && level > dimension) {
-        gemTypes = 4;
-      }
 
       if (Math.random() > 0.2) {
         grid[i][j].type = Math.floor(Math.random() * gemTypes) + 1;
@@ -69,31 +78,12 @@ graphics.hitArea = new PIXI.Rectangle(0, 0, 800, 600);
 
 container.addChild(graphics);
 
-function getNodeColor(r) {
-  var color;
-  switch (r) {
-    case 1:
-      color = PIECE_RED;
-      break;
-    case 2:
-      color = PIECE_GREEN;
-      break;
-    case 3:
-      color = PIECE_BLUE;
-      break;
-    case 4:
-      color = PIECE_CYAN;
-      break;
-  }
-  return color;
-}
-
 function redrawGrid() {
   graphics.clear();
   for (var y = 0; y < dimension; y++) {
     for (var x = 0; x < dimension; x++) {
       if (grid[y][x].type != 0) {
-        graphics.beginFill(getNodeColor(grid[y][x].type));
+        graphics.beginFill(PIECES[grid[y][x].type]);
         if (grid[y][x].falling) {
           graphics.drawCircle(40 + x * 40, 40 + y * 40 - fallingOffset, 16); // drawCircle(x, y, radius)
         } else {
@@ -128,7 +118,7 @@ container.addChild(scoreText);
 
 function floodFill(y, x, c) {
   var n = 1;
-  grid[y][x].type = PIECE_EMPTY;
+  grid[y][x].type = 0;
 
   if (x - 1 >= 0) {
     if (grid[y][x - 1].type == c) {
@@ -165,7 +155,7 @@ graphics.click = function(data) {
   if (cx < 0 || cy < 0 || cx >= dimension || cy >= dimension) return;
 
   // Player clicks piece
-  if (canClick && grid[cy][cx].type != PIECE_EMPTY) {
+  if (canClick && grid[cy][cx].type != 0) {
     canClick = false;
     SOUND_POP.stop();
     var piecesRemoved = floodFill(cy, cx, grid[cy][cx].type);
@@ -183,7 +173,7 @@ graphics.click = function(data) {
     if (piecesLeft == 0) {
       level += 1;
       dimension += 1;
-      if (dimension > 14) dimension = 14;
+      if (dimension > maxDimension) dimension = maxDimension;
       generateMap(level);
       SOUND_CLEAR.play();
     } else {
@@ -204,10 +194,10 @@ function applyGravity() {
   for (var x = 0; x < dimension; x++) {
     for (var y = dimension - 1; y > 0; y--) {
 
-      if (grid[y - 1][x].type != PIECE_EMPTY && grid[y][x].type == PIECE_EMPTY) {
+      if (grid[y - 1][x].type != 0 && grid[y][x].type == 0) {
         grid[y][x].type = grid[y - 1][x].type;
         grid[y][x].falling = true;
-        grid[y - 1][x].type = PIECE_EMPTY;
+        grid[y - 1][x].type = 0;
         fallingOffset = 40;
       }
     }
