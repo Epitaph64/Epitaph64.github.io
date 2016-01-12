@@ -5,13 +5,14 @@
     <description>The website/blog of Epitaph64 / Enzor.</description>
     <link>http://e64.us/</link>
     <atom:link href="http://e64.us/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 12 Jan 2016 11:01:16 -0700</pubDate>
-    <lastBuildDate>Tue, 12 Jan 2016 11:01:16 -0700</lastBuildDate>
+    <pubDate>Tue, 12 Jan 2016 11:12:32 -0700</pubDate>
+    <lastBuildDate>Tue, 12 Jan 2016 11:12:32 -0700</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>HTML 5 Game Development Experiments</title>
-        <description>
+        <description>&lt;h4 id=&quot;play-the-game-a-hrefgamespeg-pilferer-click-here-abrbr&quot;&gt;Play the game: &lt;a href=&quot;/games/peg-pilferer/&quot;&gt;[ Click Here ]&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;/h4&gt;
+
 &lt;p&gt;After finishing the &lt;a href=&quot;/website/project/2016/01/08/project-complete-engr-website.html&quot;&gt;engineering class website&lt;/a&gt; I was tasked to work on over winter break,
 I decided to use the last week of vacation to improve my JavaScript skills. I decided working on a simple
 game would be a nice way to relax and still get some programming practice in.&lt;/p&gt;
