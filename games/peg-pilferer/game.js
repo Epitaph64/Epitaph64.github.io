@@ -146,7 +146,8 @@ graphics.click = function(data) {
   // Player clicks piece
   if (canClick && grid[cy][cx].type != PIECE_EMPTY) {
     canClick = false;
-    SOUND_POP.play();
+    SOUND_POP.pause();
+    SOUND_POP.currentTime = 0;
     var piecesRemoved = floodFill(cy, cx, grid[cy][cx].type);
     piecesLeft -= piecesRemoved;
     if (piecesRemoved <= 16) {
@@ -160,12 +161,12 @@ graphics.click = function(data) {
     }
 
     if (piecesLeft == 0) {
-      SOUND_POP.pause();
-      SOUND_POP.currentTime = 0;
       dimension += 1;
       if (dimension > 14) dimension = 14;
       generateMap(level);
       SOUND_CLEAR.play();
+    } else {
+      SOUND_POP.play();
     }
 
     scoreText.text = '' + score;
@@ -199,7 +200,7 @@ function animate() {
 
   if (fallingOffset > 0) {
     fallingOffset -= 4;
-    if (fallingOffset == 0) {
+    if (fallingOffset <= 0) {
       for (var y = 0; y < dimension; y++) {
         for (var x = 0; x < dimension; x++) {
           if (grid[y][x].falling) {
@@ -207,6 +208,8 @@ function animate() {
           }
         }
       }
+
+      fallingOffset = 0;
     }
   }
 
