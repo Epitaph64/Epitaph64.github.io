@@ -211,9 +211,9 @@ function animate() {
 
       fallingOffset = 0;
     }
-  }
 
-  redrawGrid();
+    redrawGrid();
+  }
 
   mx = renderer.plugins.interaction.mouse.global.x;
   my = renderer.plugins.interaction.mouse.global.y;
