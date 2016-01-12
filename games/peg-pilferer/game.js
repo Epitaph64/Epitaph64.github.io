@@ -158,7 +158,6 @@ graphics.click = function(data) {
     scoreText.text = '' + score;
     redrawGrid();
 
-    console.log(piecesLeft);
     canClick = true;
   }
 };
