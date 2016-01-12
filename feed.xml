@@ -5,9 +5,51 @@
     <description>The website/blog of Epitaph64 / Enzor.</description>
     <link>http://e64.us/</link>
     <atom:link href="http://e64.us/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 09 Jan 2016 13:43:18 -0700</pubDate>
-    <lastBuildDate>Sat, 09 Jan 2016 13:43:18 -0700</lastBuildDate>
+    <pubDate>Tue, 12 Jan 2016 11:01:16 -0700</pubDate>
+    <lastBuildDate>Tue, 12 Jan 2016 11:01:16 -0700</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>HTML 5 Game Development Experiments</title>
+        <description>
+&lt;p&gt;After finishing the &lt;a href=&quot;/website/project/2016/01/08/project-complete-engr-website.html&quot;&gt;engineering class website&lt;/a&gt; I was tasked to work on over winter break,
+I decided to use the last week of vacation to improve my JavaScript skills. I decided working on a simple
+game would be a nice way to relax and still get some programming practice in.&lt;/p&gt;
+
+&lt;p&gt;I had used &lt;a href=&quot;http://phaser.io/&quot;&gt;Phaser&lt;/a&gt; in the past for CactusHack 2015
+(hosted by &lt;a href=&quot;http://www.meetup.com/TucsonJS/&quot;&gt;TucsonJS&lt;/a&gt;) where my group
+managed to take 2nd place thanks to our bravery in attempting a game in 24 hours.
+I suppose participating in &lt;a href=&quot;http://ludumdare.com/compo/&quot;&gt;LudumDare&lt;/a&gt; events in the past has given me a bit of agility
+when it comes to learning new game frameworks and implementing basic gameplay.&lt;/p&gt;
+
+&lt;p&gt;Sadly Phaser, despite having a lot of great features built in, suffers from a lack
+of up to date documentation and demo code. Additionally, because the library seems to have
+undergone quite a lot of change over time, many of the internet searches I performed while looking
+for basic functionality were for older versions of the library.&lt;/p&gt;
+
+&lt;p&gt;Eventually I decided that I ought to check out &lt;a href=&quot;http://www.pixijs.com/&quot;&gt;Pixi.JS&lt;/a&gt; (the library that Phaser is built
+on top of) upon hearing chatter around the internet that it was a much better library
+than Phaser, although being a bit harder to learn initially.&lt;/p&gt;
+
+&lt;p&gt;What I’ve found, however, is that Pixi.JS is much more intuitively designed, and performs
+much better for games that involve simple logic. After spending about 3-4 hours with the library
+I’ve created a very simple game &lt;a href=&quot;/games/peg-pilferer/&quot;&gt;here&lt;/a&gt;
+to demonstrate what is possible. I however did use the wonderful &lt;a href=&quot;https://github.com/peterolson/BigInteger.js&quot;&gt;
+BigInteger&lt;/a&gt; library by Peter Olson to allow quick score calculation and to store the large
+resulting integer for the later stages.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 12 Jan 2016 03:34:16 -0700</pubDate>
+        <link>http://e64.us/html5/game/programming/2016/01/12/html-5-simple-game-tutorial.html</link>
+        <guid isPermaLink="true">http://e64.us/html5/game/programming/2016/01/12/html-5-simple-game-tutorial.html</guid>
+        
+        
+        <category>html5</category>
+        
+        <category>game</category>
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>Engineering Class Website Complete!</title>
