@@ -11,11 +11,12 @@ var dimension = 4;
 var maxDimension = 14;
 
 var score = bigInt();
+var scoreThreshold = bigInt();
 var fallingOffset = 0;
 
 var level = 1;
 var piecesLeft = 0;
-var gemTypes = 3;
+var pegTypes = 3;
 
 // Pieces
 var PIECE_SETS = [
@@ -35,12 +36,11 @@ var SOUND_CLEAR = new Howl({
 });
 
 function generateMap(level) {
-  if (gemTypes == 3 && level == maxDimension) {
-    gemTypes = 4;
-  }
 
-  if (level == maxDimension + 4) {
-    PIECES = PIECE_SETS[1];
+  if (level > 2 && pegTypes == 3 && score.lt(scoreThreshold)) {
+    pegTypes = 4;
+  } else {
+    pegTypes = 3;
   }
 
   for (var i = 0; i < dimension; i++) {
@@ -51,7 +51,7 @@ function generateMap(level) {
         grid[i][j] = [];
 
       if (Math.random() > 0.2) {
-        grid[i][j].type = Math.floor(Math.random() * gemTypes) + 1;
+        grid[i][j].type = Math.floor(Math.random() * pegTypes) + 1;
       } else {
         grid[i][j].type = 0;
       }
@@ -62,9 +62,16 @@ function generateMap(level) {
       }
     }
   }
-}
 
-generateMap(level);
+  if (level > 2) {
+    scoreThreshold = score.multiply(2);
+    if (pegTypes == 3) {
+      goalText.text = 'Thr: ' + scoreThreshold;
+    } else {
+      goalText.text = 'Thr: Safe';
+    }
+  }
+}
 
 // Autodetect, create and append the renderer to the body element
 var renderer = PIXI.autoDetectRenderer(800, 600, { backgroundColor: 0x000000, antialias: true });
@@ -94,23 +101,24 @@ function redrawGrid() {
   }
 }
 
+// HUD
 var title = new PIXI.Text('', {
   font: '24px Times New Roman',
   fill: 'lime',
 });
 
-title.text = 'Peg Pilferer [v 0.2]';
+title.text = 'Peg Pilferer [v 0.3]';
 title.position.x = renderer.width - 200;
 title.position.y = 20;
 container.addChild(title);
 
-var levelText = new PIXI.Text('L: ' + level, {
+var levelText = new PIXI.Text('Lv: ' + level, {
   font: '20px Times New Roman',
   fill: 'lime',
 });
 
 levelText.position.x = renderer.width - 200;
-levelText.position.y = 80;
+levelText.position.y = 60;
 container.addChild(levelText);
 
 var scoreText = new PIXI.Text('S: ' + score, {
@@ -119,8 +127,17 @@ var scoreText = new PIXI.Text('S: ' + score, {
 });
 
 scoreText.position.x = renderer.width - 200;
-scoreText.position.y = 60;
+scoreText.position.y = 80;
 container.addChild(scoreText);
+
+var goalText = new PIXI.Text('', {
+  font: '20px Times New Roman',
+  fill: 'lime',
+});
+
+goalText.position.x = renderer.width - 200;
+goalText.position.y = 100;
+container.addChild(goalText);
 
 var creditText = new PIXI.Text('E64', {
   font: '20px Times New Roman',
@@ -175,6 +192,8 @@ graphics.click = function(data) {
     SOUND_POP.stop();
     var piecesRemoved = floodFill(cy, cx, grid[cy][cx].type);
     piecesLeft -= piecesRemoved;
+
+    // Combo calculation
     if (piecesRemoved <= 16) {
       score = score.add(bigInt(2).pow(piecesRemoved));
     } else if (piecesRemoved <= 32) {
@@ -185,11 +204,13 @@ graphics.click = function(data) {
       score = score.add(bigInt(3425536).add(bigInt(1000000).multiply(piecesRemoved)));
     }
 
+    // Level clear
     if (piecesLeft == 0) {
       level += 1;
       levelText.text = 'L: ' + level;
       dimension += 1;
       if (dimension > maxDimension) dimension = maxDimension;
+      PIECES = PIECE_SETS[Math.floor(Math.random() * PIECE_SETS.length)];
       generateMap(level);
       SOUND_CLEAR.play();
     } else {
@@ -203,6 +224,8 @@ graphics.click = function(data) {
   }
 };
 
+// Initialize game
+generateMap(level);
 redrawGrid();
 animate();
 
