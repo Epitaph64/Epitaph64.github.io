@@ -27,20 +27,26 @@ var PIECE_SETS = [
 var PIECES = PIECE_SETS[0];
 
 // SFX
-var SOUND_POP = new Howl({
+var SOUND_CLICK = new Howl({
   urls: ['sfx/click.wav'],
 });
 
-var SOUND_CLEAR = new Howl({
-  urls: ['sfx/clear.wav'],
+var SOUND_SUCCESS = new Howl({
+  urls: ['sfx/success.wav'],
+});
+
+var SOUND_FAILURE = new Howl({
+  urls: ['sfx/fail.wav'],
 });
 
 function generateMap(level) {
 
   if (level > 2 && pegTypes == 3 && score.lt(scoreThreshold)) {
     pegTypes = 4;
+    SOUND_FAILURE.play();
   } else {
     pegTypes = 3;
+    SOUND_SUCCESS.play();
   }
 
   for (var i = 0; i < dimension; i++) {
@@ -65,6 +71,10 @@ function generateMap(level) {
 
   if (level > 2) {
     scoreThreshold = score.add(bigInt(dimension).pow(3));
+    if (level >= 10) {
+      scoreThreshold = scoreThreshold.multiply(2);
+    }
+
     if (pegTypes == 3) {
       goalText.text = 'Thr: ' + scoreThreshold;
     } else {
@@ -189,7 +199,6 @@ graphics.click = function(data) {
   // Player clicks piece
   if (canClick && grid[cy][cx].type != 0) {
     canClick = false;
-    SOUND_POP.stop();
     var piecesRemoved = floodFill(cy, cx, grid[cy][cx].type);
     piecesLeft -= piecesRemoved;
 
@@ -215,9 +224,8 @@ graphics.click = function(data) {
       }
 
       generateMap(level);
-      SOUND_CLEAR.play();
     } else {
-      SOUND_POP.play();
+      SOUND_CLICK.play();
     }
 
     scoreText.text = 'S: ' + score;
