@@ -39,8 +39,23 @@ var SOUND_FAILURE = new Howl({
   urls: ['sfx/fail.wav'],
 });
 
-function generateMap(level) {
+function getComboScore(quantity) {
+  var ns = 0;
 
+  if (quantity <= 16) {
+    ns = bigInt[2].pow(quantity);
+  } else if (quantity <= 32) {
+    ns = bigInt(65536).add(bigInt(10000).multiply(quantity));
+  } else if (quantity <= 64) {
+    ns = bigInt(225536).add(bigInt(100000).multiply(quantity));
+  } else {
+    ns = bigInt(3425536).add(bigInt(1000000).multiply(quantity));
+  }
+
+  return ns;
+}
+
+function generateMap(level) {
   if (level > 2 && pegTypes == 3 && score.lt(scoreThreshold)) {
     pegTypes = 4;
     SOUND_FAILURE.play();
@@ -70,11 +85,9 @@ function generateMap(level) {
   }
 
   if (level > 2) {
-    scoreThreshold = score.add(bigInt(dimension).pow(3));
-    if (level >= 10) {
-      scoreThreshold = scoreThreshold.multiply(2);
-    }
-
+    var sDivisor = bigInt[10].plus(bigInt(level).divide(3));
+    if (sDivisor.greaterOrEquals(bigInt[20])) sDivisor = bigInt[20];
+    scoreThreshold = score.multiply(bigInt[30]).divide(sDivisor);
     if (pegTypes == 3) {
       goalText.text = 'Thr: ' + scoreThreshold;
     } else {
@@ -117,7 +130,7 @@ var title = new PIXI.Text('', {
   fill: 'lime',
 });
 
-title.text = 'Peg Pilferer [v 0.3b]';
+title.text = 'Peg Pilferer [v 0.3c]';
 title.position.x = renderer.width - 205;
 title.position.y = 20;
 container.addChild(title);
@@ -201,17 +214,7 @@ graphics.click = function(data) {
     canClick = false;
     var piecesRemoved = floodFill(cy, cx, grid[cy][cx].type);
     piecesLeft -= piecesRemoved;
-
-    // Combo calculation
-    if (piecesRemoved <= 16) {
-      score = score.add(bigInt(2).pow(piecesRemoved));
-    } else if (piecesRemoved <= 32) {
-      score = score.add(bigInt(65536).add(bigInt(10000).multiply(piecesRemoved)));
-    } else if (piecesRemoved <= 64) {
-      score = score.add(bigInt(225536).add(bigInt(100000).multiply(piecesRemoved)));
-    } else {
-      score = score.add(bigInt(3425536).add(bigInt(1000000).multiply(piecesRemoved)));
-    }
+    score = score.add(getComboScore(piecesRemoved));
 
     // Level clear
     if (piecesLeft == 0) {
