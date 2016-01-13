@@ -64,7 +64,7 @@ function generateMap(level) {
   }
 
   if (level > 2) {
-    scoreThreshold = score.multiply(2);
+    scoreThreshold = score.add(bigInt(dimension).pow(3));
     if (pegTypes == 3) {
       goalText.text = 'Thr: ' + scoreThreshold;
     } else {
@@ -107,8 +107,8 @@ var title = new PIXI.Text('', {
   fill: 'lime',
 });
 
-title.text = 'Peg Pilferer [v 0.3]';
-title.position.x = renderer.width - 200;
+title.text = 'Peg Pilferer [v 0.3b]';
+title.position.x = renderer.width - 205;
 title.position.y = 20;
 container.addChild(title);
 
@@ -210,7 +210,10 @@ graphics.click = function(data) {
       levelText.text = 'L: ' + level;
       dimension += 1;
       if (dimension > maxDimension) dimension = maxDimension;
-      PIECES = PIECE_SETS[Math.floor(Math.random() * PIECE_SETS.length)];
+      if (level == 16) {
+        PIECES = PIECE_SETS[1];
+      }
+
       generateMap(level);
       SOUND_CLEAR.play();
     } else {
