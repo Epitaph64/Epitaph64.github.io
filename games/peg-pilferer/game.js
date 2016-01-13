@@ -130,7 +130,7 @@ var title = new PIXI.Text('', {
   fill: 'lime',
 });
 
-title.text = 'Peg Pilferer [v 0.3c]';
+title.text = 'Peg Pilferer [v 0.3ca]';
 title.position.x = renderer.width - 205;
 title.position.y = 20;
 container.addChild(title);
@@ -244,6 +244,7 @@ redrawGrid();
 animate();
 
 function applyGravity() {
+  fallingOffset = 40;
   for (var x = 0; x < dimension; x++) {
     for (var y = dimension - 1; y > 0; y--) {
 
@@ -251,7 +252,6 @@ function applyGravity() {
         grid[y][x].type = grid[y - 1][x].type;
         grid[y][x].falling = true;
         grid[y - 1][x].type = 0;
-        fallingOffset = 40;
       }
     }
   }
