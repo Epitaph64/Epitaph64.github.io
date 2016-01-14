@@ -94,7 +94,7 @@ function generateMap(level) {
   }
 
   if (level > 2) {
-    var strength = Math.ceil(((dimension * dimension) / 4) * Math.ceil(level / 8));
+    var strength = Math.ceil(dimension * dimension / 5);
 
     scoreThreshold = score.add(getComboScore(strength));
     if (pegTypes <= 3) {
