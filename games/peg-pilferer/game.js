@@ -139,7 +139,7 @@ var title = new PIXI.Text('', {
   fill: 'lime',
 });
 
-title.text = 'Peg Pilferer [v 0.3ca]';
+title.text = 'Peg Pilferer [v 0.4]';
 title.position.x = renderer.width - 205;
 title.position.y = 20;
 container.addChild(title);
