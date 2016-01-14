@@ -60,6 +60,17 @@ function getComboScore(quantity) {
 }
 
 function generateMap(level) {
+  levelText.text = 'L: ' + level;
+
+  if (level != 1) {
+    dimension += 1;
+    if (dimension > maxDimension) dimension = maxDimension;
+    if (level == 16) {
+      PIECES = PIECE_SETS[1];
+    }
+  }
+
+  // Threshold punishment (increase number of peg colors for next level)
   if (level > 2 && pegTypes <= 3 && score.lt(scoreThreshold)) {
     pegTypes = 4;
     SOUND_FAILURE.play();
@@ -73,6 +84,7 @@ function generateMap(level) {
     }
   }
 
+  // Generate the level
   for (var i = 0; i < dimension; i++) {
     if (!grid[i])
       grid[i] = [];
@@ -93,10 +105,10 @@ function generateMap(level) {
     }
   }
 
+  // Update the threshold based on the level generated
   if (level > 2) {
-    var strength = Math.ceil(dimension * dimension / 5);
-
-    scoreThreshold = score.add(getComboScore(strength));
+    var strength = Math.floor(piecesLeft / 5);
+    scoreThreshold = score.add(bigInt(getComboScore(strength)).multiply(bigInt(Math.ceil(level / 4))));
     if (pegTypes <= 3) {
       goalText.text = 'Thr: ' + scoreThreshold;
     } else {
@@ -139,7 +151,7 @@ var title = new PIXI.Text('', {
   fill: 'lime',
 });
 
-title.text = 'Peg Pilferer [v 0.4]';
+title.text = 'Peg Pilferer [v 0]';
 title.position.x = renderer.width - 205;
 title.position.y = 20;
 container.addChild(title);
@@ -227,15 +239,7 @@ graphics.click = function(data) {
 
     // Level clear
     if (piecesLeft == 0) {
-      level += 1;
-      levelText.text = 'L: ' + level;
-      dimension += 1;
-      if (dimension > maxDimension) dimension = maxDimension;
-      if (level == 16) {
-        PIECES = PIECE_SETS[1];
-      }
-
-      generateMap(level);
+      generateMap(level += 1);
     } else {
       SOUND_CLICK.play();
     }
