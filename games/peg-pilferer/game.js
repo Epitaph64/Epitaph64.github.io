@@ -39,29 +39,38 @@ var SOUND_FAILURE = new Howl({
   urls: ['sfx/fail.wav'],
 });
 
+var SOUND_BONUS = new Howl({
+  urls: ['sfx/bonus.wav'],
+});
+
 function getComboScore(quantity) {
   var ns = 0;
 
-  if (quantity <= 16) {
+  if (quantity <= 4) {
     ns = bigInt[2].pow(quantity);
-  } else if (quantity <= 32) {
-    ns = bigInt(65536).add(bigInt(10000).multiply(quantity));
-  } else if (quantity <= 64) {
-    ns = bigInt(225536).add(bigInt(100000).multiply(quantity));
+  } else if (quantity <= 8) {
+    ns = bigInt[100].multiply(quantity);
+  } else if (quantity <= 16) {
+    ns = bigInt(800).multiply(bigInt[2].pow(quantity / 2));
   } else {
-    ns = bigInt(3425536).add(bigInt(1000000).multiply(quantity));
+    ns = bigInt(250000).multiply(quantity - 16);
   }
 
   return ns;
 }
 
 function generateMap(level) {
-  if (level > 2 && pegTypes == 3 && score.lt(scoreThreshold)) {
+  if (level > 2 && pegTypes <= 3 && score.lt(scoreThreshold)) {
     pegTypes = 4;
     SOUND_FAILURE.play();
   } else {
-    pegTypes = 3;
-    SOUND_SUCCESS.play();
+    if (level < 2 || Math.random() > 0.3) {
+      pegTypes = 3;
+      SOUND_SUCCESS.play();
+    } else {
+      pegTypes = 2;
+      SOUND_BONUS.play();
+    }
   }
 
   for (var i = 0; i < dimension; i++) {
@@ -85,10 +94,10 @@ function generateMap(level) {
   }
 
   if (level > 2) {
-    var sDivisor = bigInt[10].plus(bigInt(level).divide(3));
-    if (sDivisor.greaterOrEquals(bigInt[20])) sDivisor = bigInt[20];
-    scoreThreshold = score.multiply(bigInt[30]).divide(sDivisor);
-    if (pegTypes == 3) {
+    var strength = Math.ceil(((dimension * dimension) / 4) * Math.ceil(level / 8));
+
+    scoreThreshold = score.add(getComboScore(strength));
+    if (pegTypes <= 3) {
       goalText.text = 'Thr: ' + scoreThreshold;
     } else {
       goalText.text = 'Thr: Safe';
