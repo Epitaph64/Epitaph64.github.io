@@ -5,8 +5,8 @@
     <description>The website/blog of Epitaph64 / Enzor.</description>
     <link>http://e64.us/</link>
     <atom:link href="http://e64.us/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 14 Jan 2016 20:17:00 -0700</pubDate>
-    <lastBuildDate>Thu, 14 Jan 2016 20:17:00 -0700</lastBuildDate>
+    <pubDate>Thu, 14 Jan 2016 20:21:44 -0700</pubDate>
+    <lastBuildDate>Thu, 14 Jan 2016 20:21:44 -0700</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -34,13 +34,12 @@ than Phaser, although being a bit harder to learn initially.&lt;/p&gt;
 
 &lt;p&gt;What I’ve found, however, is that Pixi.JS is much more intuitively designed, and performs
 much better for games that involve simple logic. After spending about 3-4 hours with the library
-I’ve created a very simple game &lt;a href=&quot;/games/peg-pilferer/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Edit: I have since spent quite a few more hours adding a few more elements to the game such as a threshold mechanic, and smoother animations.&lt;/p&gt;
-
-&lt;p&gt;to demonstrate what is possible. I however did use the wonderful &lt;a href=&quot;https://github.com/peterolson/BigInteger.js&quot;&gt;
+I’ve created a very simple game &lt;a href=&quot;/games/peg-pilferer/&quot;&gt;here&lt;/a&gt;
+to demonstrate what is possible. I however did use the wonderful &lt;a href=&quot;https://github.com/peterolson/BigInteger.js&quot;&gt;
 BigInteger&lt;/a&gt; library by Peter Olson to allow quick score calculation and to store the large
 resulting integer for the later stages.&lt;/p&gt;
+
+&lt;p&gt;1/14/16 - I have since spent quite a few more hours adding a few more elements to the game such as a threshold mechanic, and smoother animations.&lt;/p&gt;
 </description>
         <pubDate>Tue, 12 Jan 2016 03:34:16 -0700</pubDate>
         <link>http://e64.us/html5/game/programming/2016/01/12/peg-pilferer-release.html</link>
