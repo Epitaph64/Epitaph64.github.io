@@ -244,7 +244,7 @@ function floodFill(y, x, c) {
 }
 
 // Handle User Mouse Click
-graphics.click = function(data) {
+graphics.mousedown = function(data) {
   var cx = Math.floor((mx - 20) / 40);
   var cy = Math.floor((my - 20) / 40);
 
