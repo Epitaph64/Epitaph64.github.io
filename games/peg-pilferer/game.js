@@ -279,6 +279,8 @@ function executeCombo() {
 
 // Handle User Mouse Click
 graphics.mousedown = function(data) {
+  mx = data.data.global.x;
+  my = data.data.global.y;
   executeCombo();
 };
 
@@ -325,9 +327,6 @@ function animate() {
     }
     redrawGrid();
   }
-
-  mx = renderer.plugins.interaction.mouse.global.x;
-  my = renderer.plugins.interaction.mouse.global.y;
 
   renderer.render(container);
   requestAnimationFrame(animate);
