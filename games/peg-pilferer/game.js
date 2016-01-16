@@ -13,6 +13,7 @@ var maxDimension = 14;
 var score = bigInt();
 var scoreThreshold = bigInt();
 var fallingOffset = 0;
+var fallingPegs = Array();
 
 var level = 1;
 var piecesLeft = 0;
@@ -303,6 +304,8 @@ function applyGravity() {
         grid[y][x].type = grid[y - 1][x].type;
         grid[y][x].falling = true;
         grid[y - 1][x].type = 0;
+        fallingPegs.push(x);
+        fallingPegs.push(y);
       }
     }
   }
@@ -313,20 +316,16 @@ function animate() {
     applyGravity();
   }
 
-  if (fallingOffset > 0) {
-    fallingOffset -= 4;
-    if (fallingOffset <= 0) {
-      for (var y = 0; y < dimension; y++) {
-        for (var x = 0; x < dimension; x++) {
-          if (grid[y][x].falling) {
-            grid[y][x].falling = false;
-          }
-        }
-      }
-      fallingOffset = 0;
+  if (fallingOffset > 0) { fallingOffset -= 4; }
+  if (fallingOffset == 0) {
+    var sy;
+    var sx;
+    while (sy = fallingPegs.pop()) {
+      sx = fallingPegs.pop();
+      grid[sy][sx].falling = false;
     }
-    redrawGrid();
   }
+  redrawGrid();
 
   renderer.render(container);
   requestAnimationFrame(animate);
