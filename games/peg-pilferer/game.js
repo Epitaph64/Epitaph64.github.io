@@ -109,7 +109,7 @@ function generateMap(level) {
 
   // Update the threshold based on the level generated
   if (level > 2) {
-    var baseStrength = Math.floor(piecesLeft / 4);
+    var baseStrength = Math.floor(piecesLeft / 6);
     var levelOverload = Math.ceil((level - 3) / 2);
     if (levelOverload < 1) {
       levelOverload = 1;
