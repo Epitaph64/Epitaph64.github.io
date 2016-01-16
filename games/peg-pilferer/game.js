@@ -64,7 +64,7 @@ function generateMap(level) {
 
   if (level != 1) {
     dimension += 1;
-    if (dimension > maxDimension) dimension = maxDimension;
+    if (dimension > maxDimension) { dimension = maxDimension; }
     if (level == 16) {
       PIECES = PIECE_SETS[1];
     }
@@ -86,11 +86,13 @@ function generateMap(level) {
 
   // Generate the level
   for (var i = 0; i < dimension; i++) {
-    if (!grid[i])
+    if (!grid[i]) {
       grid[i] = [];
+    }
     for (var j = 0; j < dimension; j++) {
-      if (!grid[i][j])
+      if (!grid[i][j]) {
         grid[i][j] = [];
+      }
 
       if (Math.random() > 0.2) {
         grid[i][j].type = Math.floor(Math.random() * pegTypes) + 1;
@@ -107,8 +109,13 @@ function generateMap(level) {
 
   // Update the threshold based on the level generated
   if (level > 2) {
-    var strength = Math.floor(piecesLeft / 5);
-    scoreThreshold = score.add(bigInt(getComboScore(strength)).multiply(bigInt(Math.ceil(level / 4))));
+    var baseStrength = Math.floor(piecesLeft / 4);
+    var levelOverload = Math.ceil((level - 3) / 2);
+    if (levelOverload < 1) {
+      levelOverload = 1;
+    }
+    scoreThreshold = score.add(bigInt(
+      getComboScore(baseStrength)).multiply(levelOverload));
     if (pegTypes <= 3) {
       goalText.text = 'Thr: ' + scoreThreshold;
     } else {
@@ -118,7 +125,8 @@ function generateMap(level) {
 }
 
 // Autodetect, create and append the renderer to the body element
-var renderer = PIXI.autoDetectRenderer(800, 600, { backgroundColor: 0x000000, antialias: true });
+var renderer = PIXI.autoDetectRenderer(800, 600,
+  {backgroundColor: 0x000000, antialias: true});
 document.body.appendChild(renderer.view);
 var container = new PIXI.Container();
 var graphics = new PIXI.Graphics();
@@ -132,14 +140,16 @@ function redrawGrid() {
   for (var y = 0; y < dimension; y++) {
     for (var x = 0; x < dimension; x++) {
       if (grid[y][x].type != 0) {
+
+        // Draw a peg
         graphics.beginFill(PIECES[grid[y][x].type]);
         if (grid[y][x].falling) {
           graphics.drawCircle(40 + x * 40, 40 + y * 40 - fallingOffset, 16); // drawCircle(x, y, radius)
         } else {
           graphics.drawCircle(40 + x * 40, 40 + y * 40, 16); // drawCircle(x, y, radius)
         }
-
         graphics.endFill();
+
       }
     }
   }
@@ -174,7 +184,7 @@ scoreText.position.x = renderer.width - 200;
 scoreText.position.y = 80;
 container.addChild(scoreText);
 
-var goalText = new PIXI.Text('', {
+var goalText = new PIXI.Text('Thr: SAFE', {
   font: '20px Times New Roman',
   fill: 'lime',
 });
@@ -182,6 +192,16 @@ var goalText = new PIXI.Text('', {
 goalText.position.x = renderer.width - 200;
 goalText.position.y = 100;
 container.addChild(goalText);
+
+var diff = score - scoreThreshold;
+var diffText = new PIXI.Text('Diff: ' + diff, {
+  font: '20px Times New Roman',
+  fill: 'lime',
+});
+
+diffText.position.x = renderer.width - 200;
+diffText.position.y = 120;
+container.addChild(diffText);
 
 var creditText = new PIXI.Text('E64', {
   font: '20px Times New Roman',
@@ -228,7 +248,7 @@ graphics.click = function(data) {
   var cx = Math.floor((mx - 20) / 40);
   var cy = Math.floor((my - 20) / 40);
 
-  if (cx < 0 || cy < 0 || cx >= dimension || cy >= dimension) return;
+  if (cx < 0 || cy < 0 || cx >= dimension || cy >= dimension) { return; }
 
   // Player clicks piece
   if (canClick && grid[cy][cx].type != 0) {
@@ -247,6 +267,13 @@ graphics.click = function(data) {
     scoreText.text = 'S: ' + score;
     redrawGrid();
 
+    var diff = score - scoreThreshold;
+    if (diff >= 0) {
+      diffText.text = 'Diff: SAFE';
+    } else {
+      diffText.text = 'Diff: ' + diff;
+    }
+
     canClick = true;
   }
 };
@@ -260,7 +287,6 @@ function applyGravity() {
   fallingOffset = 40;
   for (var x = 0; x < dimension; x++) {
     for (var y = dimension - 1; y > 0; y--) {
-
       if (grid[y - 1][x].type != 0 && grid[y][x].type == 0) {
         grid[y][x].type = grid[y - 1][x].type;
         grid[y][x].falling = true;
@@ -285,10 +311,8 @@ function animate() {
           }
         }
       }
-
       fallingOffset = 0;
     }
-
     redrawGrid();
   }
 
