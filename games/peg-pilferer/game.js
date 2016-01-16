@@ -194,7 +194,7 @@ goalText.position.y = 100;
 container.addChild(goalText);
 
 var diff = score - scoreThreshold;
-var diffText = new PIXI.Text('Diff: ' + diff, {
+var diffText = new PIXI.Text('Diff: SAFE', {
   font: '20px Times New Roman',
   fill: 'lime',
 });
