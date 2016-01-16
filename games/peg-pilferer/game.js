@@ -243,8 +243,7 @@ function floodFill(y, x, c) {
   return n;
 }
 
-// Handle User Mouse Click
-graphics.mousedown = function(data) {
+function executeCombo() {
   var cx = Math.floor((mx - 20) / 40);
   var cy = Math.floor((my - 20) / 40);
 
@@ -276,6 +275,17 @@ graphics.mousedown = function(data) {
 
     canClick = true;
   }
+}
+
+// Handle User Mouse Click
+graphics.mousedown = function(data) {
+  executeCombo();
+};
+
+graphics.tap = function(data) {
+  mx = data.data.global.x;
+  my = data.data.global.y;
+  executeCombo();
 };
 
 // Initialize game
