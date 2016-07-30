@@ -47,11 +47,11 @@ var SOUND_BONUS = new Howl({
 function getComboScore(quantity) {
   var ns = 0;
 
-  if (quantity <= 4) {
+  if (quantity < 4) {
     ns = bigInt[2].pow(quantity);
-  } else if (quantity <= 8) {
+  } else if (quantity < 8) {
     ns = bigInt[100].multiply(quantity);
-  } else if (quantity <= 16) {
+  } else if (quantity < 16) {
     ns = bigInt(800).multiply(bigInt[2].pow(quantity / 2));
   } else {
     ns = bigInt(250000).multiply(quantity - 16);
@@ -94,13 +94,11 @@ function generateMap(level) {
       if (!grid[i][j]) {
         grid[i][j] = [];
       }
-
       if (Math.random() > 0.2) {
         grid[i][j].type = Math.floor(Math.random() * pegTypes) + 1;
       } else {
         grid[i][j].type = 0;
       }
-
       if (grid[i][j].type != 0) {
         grid[i][j].falling = false;
         piecesLeft += 1;
@@ -141,7 +139,6 @@ function redrawGrid() {
   for (var y = 0; y < dimension; y++) {
     for (var x = 0; x < dimension; x++) {
       if (grid[y][x].type != 0) {
-
         // Draw a peg
         graphics.beginFill(PIECES[grid[y][x].type]);
         if (grid[y][x].falling) {
@@ -150,7 +147,6 @@ function redrawGrid() {
           graphics.drawCircle(40 + x * 40, 40 + y * 40, 16); // drawCircle(x, y, radius)
         }
         graphics.endFill();
-
       }
     }
   }
