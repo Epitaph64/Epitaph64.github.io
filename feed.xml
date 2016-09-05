@@ -3,10 +3,10 @@
   <channel>
     <title>e64</title>
     <description>The website/blog of Epitaph64 / Enzor.</description>
-    <link>https://e64.us/</link>
-    <atom:link href="https://e64.us/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 05 Sep 2016 12:03:32 -0700</pubDate>
-    <lastBuildDate>Mon, 05 Sep 2016 12:03:32 -0700</lastBuildDate>
+    <link>http://e64.us/</link>
+    <atom:link href="http://e64.us/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 05 Sep 2016 12:08:03 -0700</pubDate>
+    <lastBuildDate>Mon, 05 Sep 2016 12:08:03 -0700</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -33,7 +33,7 @@ audio player.&lt;/p&gt;
 &lt;h3 id=&quot;breakdown-lest-you-crumble&quot;&gt;Breakdown Lest You Crumble&lt;/h3&gt;
 
 &lt;audio controls=&quot;&quot;&gt;
-  &lt;source src=&quot;https://e64.us/mp3s/breakdown-lest-you-crumble.mp3&quot; type=&quot;audio/mpeg&quot; /&gt;
+  &lt;source src=&quot;http://e64.us/mp3s/breakdown-lest-you-crumble.mp3&quot; type=&quot;audio/mpeg&quot; /&gt;
 &lt;/audio&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -42,7 +42,7 @@ audio player.&lt;/p&gt;
 &lt;h3 id=&quot;someday-well-feast-at-dawn&quot;&gt;Someday We’ll Feast At Dawn&lt;/h3&gt;
 
 &lt;audio controls=&quot;&quot;&gt;
-  &lt;source src=&quot;https://e64.us/mp3s/someday-feast-dawn.mp3&quot; type=&quot;audio/mpeg&quot; /&gt;
+  &lt;source src=&quot;http://e64.us/mp3s/someday-feast-dawn.mp3&quot; type=&quot;audio/mpeg&quot; /&gt;
 &lt;/audio&gt;
 
 &lt;script&gt;
@@ -58,8 +58,8 @@ document.addEventListener('play', function(e){
 
 </description>
         <pubDate>Fri, 29 Jul 2016 08:47:20 -0700</pubDate>
-        <link>https://e64.us/music/creative/2016/07/29/writing-music-with-reaper-and-komplete-10.html</link>
-        <guid isPermaLink="true">https://e64.us/music/creative/2016/07/29/writing-music-with-reaper-and-komplete-10.html</guid>
+        <link>http://e64.us/music/creative/2016/07/29/writing-music-with-reaper-and-komplete-10.html</link>
+        <guid isPermaLink="true">http://e64.us/music/creative/2016/07/29/writing-music-with-reaper-and-komplete-10.html</guid>
         
         
         <category>music</category>
@@ -101,8 +101,8 @@ resulting integer for the later stages.&lt;/p&gt;
 &lt;p&gt;1/14/16 - I have since spent quite a few more hours adding a few more elements to the game such as a threshold mechanic, and smoother animations.&lt;/p&gt;
 </description>
         <pubDate>Tue, 12 Jan 2016 03:34:16 -0700</pubDate>
-        <link>https://e64.us/html5/game/programming/2016/01/12/peg-pilferer-release.html</link>
-        <guid isPermaLink="true">https://e64.us/html5/game/programming/2016/01/12/peg-pilferer-release.html</guid>
+        <link>http://e64.us/html5/game/programming/2016/01/12/peg-pilferer-release.html</link>
+        <guid isPermaLink="true">http://e64.us/html5/game/programming/2016/01/12/peg-pilferer-release.html</guid>
         
         
         <category>html5</category>
@@ -133,8 +133,8 @@ class website has been deployed and is operational at &lt;a href=&quot;http://ww
 &lt;p&gt;Overall, I had a good experience with Jeyll and have learned many things which I will surely make use of in improving my own site in the future. Additionally, I have even begun lurking Jekyll’s GitHub page to see what types of features are being worked on. Perhaps I may even try to contribute in the future!&lt;/p&gt;
 </description>
         <pubDate>Fri, 08 Jan 2016 13:32:11 -0700</pubDate>
-        <link>https://e64.us/website/project/2016/01/08/project-complete-engr-website.html</link>
-        <guid isPermaLink="true">https://e64.us/website/project/2016/01/08/project-complete-engr-website.html</guid>
+        <link>http://e64.us/website/project/2016/01/08/project-complete-engr-website.html</link>
+        <guid isPermaLink="true">http://e64.us/website/project/2016/01/08/project-complete-engr-website.html</guid>
         
         
         <category>website</category>
@@ -151,8 +151,8 @@ Although the site is being compiled to static HTML to be served on Github, it al
 like I am working on a dynamic site due to the power of the included technologies in the framework.&lt;/p&gt;
 </description>
         <pubDate>Thu, 22 Oct 2015 12:31:00 -0700</pubDate>
-        <link>https://e64.us/website/blog/2015/10/22/new-blog.html</link>
-        <guid isPermaLink="true">https://e64.us/website/blog/2015/10/22/new-blog.html</guid>
+        <link>http://e64.us/website/blog/2015/10/22/new-blog.html</link>
+        <guid isPermaLink="true">http://e64.us/website/blog/2015/10/22/new-blog.html</guid>
         
         
         <category>website</category>
