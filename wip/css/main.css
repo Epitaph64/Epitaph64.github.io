@@ -267,7 +267,7 @@ body {
 
 hr {
   background-color: #4ebbff;
-  height: 0.5em;
+  height: 0.5em em;
   margin-top: 2em;
   margin-bottom: 2em; }
 
@@ -293,7 +293,7 @@ table {
 
 .title {
   margin: 0.5em;
-  font-size: 5em;
+  font-size: 4em;
   color: white;
   text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
   -webkit-font-smoothing: antialiased; }
@@ -306,7 +306,7 @@ table {
   vertical-align: text-top; }
 
 p {
-  font-size: 1.25em;
+  font-size: 1em;
   margin-bottom: 1em; }
 
 li, ul {
