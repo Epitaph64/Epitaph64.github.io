@@ -1,4 +1,5 @@
-# Epitaph64.github.io
-Github website project
+## Future codebase for e64.us (work in progress)
 
-Viewable at: http://e64.us
+Uses shakeShane's [jekyll-gulp-sass-browser-sync] project as a foundation with much love!
+
+[jekyll-gulp-sass-browser-sync]: https://github.com/shakyShane/jekyll-gulp-sass-browser-sync
