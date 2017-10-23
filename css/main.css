@@ -286,20 +286,24 @@ a:hover {
   text-align: center;
   margin: 0 auto; }
 
-table {
+.post-table {
   max-width: 95%;
-  align: center;
   margin: 0 auto; }
-  table th {
+  .post-table th {
     padding-bottom: 1em; }
-  table td {
+  .post-table th:nth-child(2) {
+    text-align: left;
+    padding-left: 1em; }
+  .post-table td {
     padding-top: 0.25em;
     padding-bottom: 0.25em; }
-  table td.post-date {
+  .post-table td:nth-child(2) {
+    padding-left: 1em; }
+  .post-table td.post-date {
     vertical-align: top;
     width: 25%;
     height: 1.5em; }
-  table td.post-title {
+  .post-table td.post-title {
     vertical-align: top;
     width: 75%;
     height: 1.5em;
