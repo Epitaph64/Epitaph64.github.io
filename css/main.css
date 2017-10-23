@@ -260,19 +260,24 @@ html, body {
   height: 100%; }
 
 body {
-  background-color: #00304e;
+  background-color: #00203c;
   margin: 4em auto;
   max-width: 900px;
   font-family: Consolas,monaco,monospace; }
 
 hr {
-  background-color: #4ebbff;
-  height: 0.5em em;
-  margin-top: 2em;
-  margin-bottom: 2em; }
+  margin-top: 1.7em;
+  margin-bottom: 1.7em; }
 
-div.site {
-  border: 0.5em solid #4ebbff;
+a {
+  color: #00203c;
+  text-decoration: none; }
+
+a:hover {
+  color: #3ca4ff; }
+
+.site {
+  border: 0.5em solid #3ca4ff;
   background: #eee;
   padding-bottom: 2em;
   margin-bottom: 4em; }
@@ -290,15 +295,19 @@ table {
   table td {
     padding-top: 0.25em;
     padding-bottom: 0.25em; }
+  table td.post-date {
+    vertical-align: top;
+    width: 25%;
+    height: 1.5em; }
+  table td.post-title {
+    vertical-align: top;
+    width: 75%;
+    height: 1.5em;
+    text-align: left; }
 
 .title {
   margin: 0.5em;
-  font-size: 4em;
-  color: white;
-  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
-  -webkit-font-smoothing: antialiased; }
-  .title :hover {
-    color: #4ebbff; }
+  font-size: 3em; }
 
 .header {
   text-align: center;
@@ -312,42 +321,25 @@ p {
 li, ul {
   font-size: 1.25em; }
 
-a {
-  color: #00304e;
-  text-decoration: none; }
-
-p a {
-  font-style: italic; }
-
-h1 a {
-  color: white; }
-
-a:hover {
-  color: #4ebbff; }
-
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1em; }
 
-.contact {
-  text-align: center; }
-  .contact a {
-    font-size: 2em; }
+.post-title h1, .post-title h2 {
+  font-size: 1.7em; }
 
-div.post-title h2 {
-  font-size: 2em; }
-
-div.post-title p.meta {
+.post-title p.meta {
   margin-top: -1em;
-  font-size: 1.2em;
-  padding-bottom: 1em; }
+  font-size: 1.1em;
+  padding-bottom: 0.5em; }
 
-.post p, .post h1, .post h2, .post h3 {
+.post p, .post h1, .post h2, .post h3, #home p, #home h1, #home h2, #home h3 {
   max-width: 90%;
   margin-left: auto;
   margin-right: auto; }
 
-.post hr {
-  margin-top: 2em; }
+.post p a, #home p a {
+  font-weight: bold;
+  font-style: italic; }
 
 audio {
   padding-left: 5%; }
@@ -355,12 +347,7 @@ audio {
 .footer {
   padding-top: 1em; }
 
-td.post-date {
-  vertical-align: top;
-  width: 25%;
-  height: 1.5em; }
-
-td.post-title {
-  vertical-align: top;
-  width: 75%;
-  height: 1.5em; }
+.contact {
+  text-align: center; }
+  .contact a {
+    font-size: 2em; }
