@@ -257,17 +257,23 @@
   padding: 0; }
 
 html, body {
+  max-width: 64em;
+  margin: 0 auto;
   height: 100%; }
 
 body {
   background-color: #00203c;
   margin: 4em auto;
-  max-width: 900px;
+  max-width: 64em;
   font-family: Consolas,monaco,monospace; }
+  body .site {
+    border: 0.5em solid #3ca4ff;
+    background: #eee;
+    padding-bottom: 2em;
+    margin-bottom: 4em; }
 
 hr {
-  margin-top: 1.7em;
-  margin-bottom: 1.7em; }
+  margin: 1.7em auto; }
 
 a {
   color: #00203c;
@@ -275,12 +281,6 @@ a {
 
 a:hover {
   color: #3ca4ff; }
-
-.site {
-  border: 0.5em solid #3ca4ff;
-  background: #eee;
-  padding-bottom: 2em;
-  margin-bottom: 4em; }
 
 #home {
   text-align: center;
@@ -336,20 +336,26 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.1em;
   padding-bottom: 0.5em; }
 
-.post p, .post h1, .post h2, .post h3, #home p, #home h1, #home h2, #home h3 {
-  max-width: 90%;
-  margin-left: auto;
-  margin-right: auto; }
-
-.post p a, #home p a {
-  font-weight: bold;
-  font-style: italic; }
-
-.post table.two-column, #home table.two-column {
-  max-width: 90%;
-  margin: 1em auto; }
-  .post table.two-column td, #home table.two-column td {
-    padding: 1em; }
+.post, #home {
+  overflow: hidden;
+  height: auto;
+  padding: 2em; }
+  .post p a, #home p a {
+    font-weight: bold;
+    font-style: italic; }
+  .post img, #home img {
+    height: auto;
+    border: 0.25em solid #3ca4ff;
+    width: 100%; }
+  .post table.two-column, #home table.two-column {
+    margin: 0 auto; }
+    .post table.two-column tr td, #home table.two-column tr td {
+      padding: 1em; }
+      .post table.two-column tr td img, #home table.two-column tr td img {
+        width: 100%; }
+  .post hr, #home hr {
+    margin-left: -2em;
+    width: 66em; }
 
 audio {
   padding-left: 5%; }
