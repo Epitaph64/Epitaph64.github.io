@@ -313,8 +313,11 @@ li, ul {
   font-size: 1.25em; }
 
 a {
-  color: #338;
+  color: #00304e;
   text-decoration: none; }
+
+p a {
+  font-style: italic; }
 
 h1 a {
   color: white; }
