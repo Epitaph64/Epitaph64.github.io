@@ -277,7 +277,9 @@ hr {
 
 a {
   color: #00203c;
-  text-decoration: none; }
+  text-decoration: none;
+  word-wrap: break-word;
+  white-space: pre-wrap; }
 
 a:hover {
   color: #3ca4ff; }
