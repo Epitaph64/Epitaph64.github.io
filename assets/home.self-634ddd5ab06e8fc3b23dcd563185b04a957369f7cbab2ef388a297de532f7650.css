@@ -1,0 +1,184 @@
+/* line 5, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+.post {
+  align: center;
+  height: auto;
+  width: 80%;
+  overflow: hidden;
+  margin-bottom: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  display: inline-block;
+  border: 0.5em solid #3ca4ff;
+  background: #eee;
+}
+/* line 17, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+.post p {
+  color: black;
+}
+/* line 21, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+.post a {
+  color: #00203c;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+/* line 27, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+.post a:hover {
+  color: #3ca4ff;
+}
+
+/* line 33, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+h1 {
+  font-size: 3em;
+}
+
+/* line 38, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+h1, h2, h3, h4, h5, h6, p, a, th {
+  color: #3ca4ff;
+}
+
+/* line 43, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+td {
+  color: #96ceff;
+}
+
+/* line 48, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+.post-date {
+  margin-top: -1em;
+}
+
+/* line 53, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+#admin_access {
+  max-width: 64em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+/* line 60, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+.link-container {
+  max-width: 64em;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 3em;
+}
+/* line 65, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+.link-container h1 a {
+  text-decoration: none;
+}
+
+/* line 72, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+.post-categories {
+  margin-top: -1em;
+}
+
+/* line 77, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+.two-column {
+  align: center;
+}
+/* line 80, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+.two-column td img {
+  width: 100%;
+  border: 0.25em solid #3ca4ff;
+}
+/* line 85, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+.two-column td:first-child {
+  padding-right: 1em;
+}
+
+/* line 91, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+.center-align {
+  text-align: center;
+  align: center;
+}
+/* line 93, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+.center-align img {
+  max-width: 80%;
+  height: auto;
+  border: 0.25em solid #3ca4ff;
+  margin: 1em;
+}
+
+/* line 104, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+.outline {
+  border: 1px solid #3ca4ff;
+  padding: 2px;
+  background-color: white;
+  margin-bottom: 1.25em;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+/* line 114, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+html, body {
+  background-color: #00203c;
+  font-family: Consolas,monaco,monospace;
+}
+
+/* line 120, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+.home-div {
+  max-width: 64em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+/* line 125, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+.home-div .two-column td:first-child {
+  min-width: 25%;
+  vertical-align: top;
+}
+/* line 130, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+.home-div .two-column td {
+  padding-bottom: 1em;
+}
+/* line 134, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+.home-div .two-column th {
+  padding-bottom: 1em;
+}
+/* line 138, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+.home-div .two-column {
+  margin-bottom: 2em;
+}
+
+/* line 144, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+.post-div {
+  max-width: 64em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+/* line 149, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+.post-div .two-column td {
+  padding-bottom: 1em;
+}
+/* line 153, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+.post-div .two-column th {
+  padding-bottom: 1em;
+}
+/* line 157, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+.post-div .two-column {
+  margin-bottom: 2em;
+}
+/* line 161, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+.post-div .post-date, .post-div .post-categories {
+  font-weight: bold;
+}
+
+/* line 169, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+.contact a {
+  font-size: 1.5em;
+}
+
+/* line 175, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+.home-header, .home-footer {
+  max-width: 64em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+/* line 181, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+.home-footer {
+  margin-bottom: 3em;
+}
+
+/* line 186, /vagrant/static_cms_builder/app/assets/stylesheets/home.scss */
+audio {
+  max-width: 100%;
+  height: auto;
+}

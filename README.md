@@ -1,5 +1,17 @@
-## Future codebase for e64.us (work in progress)
+Built with Ruby on Rails: https://rubyonrails.org/
 
-Uses shakeShane's [jekyll-gulp-sass-browser-sync] project as a foundation with much love!
+Other libraries used:
 
-[jekyll-gulp-sass-browser-sync]: https://github.com/shakyShane/jekyll-gulp-sass-browser-sync
+https://github.com/vmg/redcarpet/blob/master/COPYING
+
+https://github.com/rails/sass-rails
+
+https://github.com/rails/jbuilder
+
+https://github.com/rails/webpacker
+
+https://github.com/sparklemotion/nokogiri
+
+Primary programming language used:
+
+https://www.ruby-lang.org/en/
