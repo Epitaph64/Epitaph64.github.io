@@ -1,0 +1,12 @@
+/* line 4, /vagrant/static_cms_builder/app/assets/stylesheets/posts.scss */
+.div-post-admin {
+  max-width: 80%;
+}
+/* line 7, /vagrant/static_cms_builder/app/assets/stylesheets/posts.scss */
+.div-post-admin tr:last-child td:last-child {
+  min-width: 25%;
+}
+/* line 11, /vagrant/static_cms_builder/app/assets/stylesheets/posts.scss */
+.div-post-admin trix-editor {
+  padding: 1em;
+}
