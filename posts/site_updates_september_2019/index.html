@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>e64.us</title>
+	<meta name="viewport" content="width=device-width">
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="7SQXRhGUH3h2H1NxRKn20YmSpzFCCCQ9VmN9qTLMvEr0AEb5zT1uszzaJmKHTaICMEYs1rjrb9n8orUWF9ZM/g==">
+    
+
+    <link rel="stylesheet" media="all" href="/assets/trix/dist/trix.self-6dd442511a4fc56685fca816ea1b42de7bbc8a0fd0bfd759530fa9e7625d1a6f.css?body=1" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="/assets/actiontext.self-85dbb85b9fc1946017fcedb371d1dd419f480c30a2f4756ca10b24931bebf84f.css?body=1" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="/assets/home.self-634ddd5ab06e8fc3b23dcd563185b04a957369f7cbab2ef388a297de532f7650.css?body=1" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="/assets/posts.self-ca45cba75db7e74cd5fded15a9daaa38b11065280500f4dd2b2ebb8e1ebbbdc3.css?body=1" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="/assets/application.self-f0d704deea029cf000697e2c0181ec173a1b474645466ed843eb5ee7bb215794.css?body=1" data-turbolinks-track="reload">
+    <script src="/packs/js/application-40465697c3e984aeb741.js" data-turbolinks-track="reload"></script>
+  </head>
+
+  <body>
+    <div class="link-container">
+<h1><a href="/">E64.US</a></h1>
+</div>
+
+<div class="post-div">
+
+<div class="post">
+	<h2 class="post-title">
+		Site Updates for September 2019
+	</h2>
+	<p class="post-date">
+		2019-09-03 03:19:37 UTC
+	</p>
+	<p class="post-categories">
+		rails, ruby, website
+	</p>
+		<div>
+<a href="https://rubyonrails.org/">Ruby on Rails</a> released version 6.0 of the framework on August 16th 2019 (<a href="https://en.wikipedia.org/wiki/Ruby_on_Rails">according to Wikipedia</a>.) I was previously using RC1 of the 6.0 framework (updated from the 5.2 stable version to see if my custom <a href="https://trix-editor.org/">Trix</a> implementation would work with the Action Text integration w/ Rails (it did on Debian.))<br><br>However, I setup the static site generator on Ubuntu via a VM within Windows (using Vagrant) and found a few issues w/ <a href="https://github.com/rails/webpacker">Webpacker</a> which I managed to workaround. The first was that the delete links in the administrative back-end for my site (when it's operating in non-static mode) were non-functional. I had to add a manual reference to the <a href="https://github.com/rails/jquery-ujs">jQuery UJS</a> and <a href="https://jquery.com/">jQuery</a> scripts in order to correct it. Also, the Trix editor was no longer appearing (the code for it appeared in the compiled packaged JS, but for some reason didn't work, perhaps due to a syntax error in the compiled JS.) I had to add another manual reference for Trix in order to resolve this using the non-active text 'trix' package which was included via the Gemfile.<br><br>Once I corrected these issues the site generator has become at feature parity w/ what it was when I first built it within Debian. I also restyled the Trix editor to match the site style and replaced the id numeric based post links w/ static links which are customizable. This will save me time managing the post links and will allow me more control over what the link will appear like for a given post. If no static link text is given for a new post then it falls back to the numeric indexing style.</div>
+<br>
+</div>
+
+
+<hr>
+
+
+<div class="link-container">
+<a href="/">Home</a>
+</div>
+
+</div>
+
+  </body>
+</html>
