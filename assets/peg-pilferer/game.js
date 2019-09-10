@@ -29,19 +29,19 @@ var PIECES = PIECE_SETS[0];
 
 // SFX
 var SOUND_CLICK = new Howl({
-  urls: ['sfx/click.wav'],
+  src: ['/assets/peg-pilferer/sfx/click.wav'],
 });
 
 var SOUND_SUCCESS = new Howl({
-  urls: ['sfx/success.wav'],
+  src: ['/assets/peg-pilferer/sfx/success.wav'],
 });
 
 var SOUND_FAILURE = new Howl({
-  urls: ['sfx/fail.wav'],
+  src: ['/assets/peg-pilferer/sfx/fail.wav'],
 });
 
 var SOUND_BONUS = new Howl({
-  urls: ['sfx/bonus.wav'],
+  src: ['/assets/peg-pilferer/sfx/bonus.wav'],
 });
 
 function getComboScore(quantity) {
