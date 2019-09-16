@@ -6,13 +6,13 @@
 	<title>e64.us</title>
 	<meta name="viewport" content="width=device-width">
     <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="AYt3wiOjd6xvZwR2csdAuB6TbWKeQPgLD0xEW17w4+t3sXt7czqq30WAm0j6iTUmAQ9q1eSbnJySA9kgvsow7w==" />
+<meta name="csrf-token" content="Zsvzc96zBZIE/kC/NQiRNSHSTHW4xc0Eg9hbE0PgRtHAvr1mI0tyalvgPeYZ0w6PnroQCjx/JdIVHDC7Cg2TRw==" />
     
 
     <link rel="stylesheet" media="all" href="/assets/trix/dist/trix.self-6dd442511a4fc56685fca816ea1b42de7bbc8a0fd0bfd759530fa9e7625d1a6f.css?body=1" data-turbolinks-track="reload" />
 <link rel="stylesheet" media="all" href="/assets/actiontext.self-85dbb85b9fc1946017fcedb371d1dd419f480c30a2f4756ca10b24931bebf84f.css?body=1" data-turbolinks-track="reload" />
 <link rel="stylesheet" media="all" href="/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="reload" />
-<link rel="stylesheet" media="all" href="/assets/home.self-634ddd5ab06e8fc3b23dcd563185b04a957369f7cbab2ef388a297de532f7650.css?body=1" data-turbolinks-track="reload" />
+<link rel="stylesheet" media="all" href="/assets/home.self-3e8056e5ef02e9fbad83642e1d1800285c7711935daf91e76ec6bd78d9caeb6d.css?body=1" data-turbolinks-track="reload" />
 <link rel="stylesheet" media="all" href="/assets/posts.self-ca45cba75db7e74cd5fded15a9daaa38b11065280500f4dd2b2ebb8e1ebbbdc3.css?body=1" data-turbolinks-track="reload" />
 <link rel="stylesheet" media="all" href="/assets/application.self-f0d704deea029cf000697e2c0181ec173a1b474645466ed843eb5ee7bb215794.css?body=1" data-turbolinks-track="reload" />
     
@@ -45,10 +45,13 @@
 <div class='home-div'>
 
 <table class='two-column'>
-	<tr><th>Date</th><th>Title</th></tr>
+	<tr>
+    <th>Date</th>
+    <th>Title</th>
+  </tr>
 	<tr>
 	<td>
-      09/02/2019  8:19 PM
+      09/02/2019  8:19 PM MST
 	</td>
 	<td>
 		<a href="/posts/site_updates_september_2019">Site Updates for September 2019</a>
@@ -56,7 +59,7 @@
 	</tr>
 	<tr>
 	<td>
-      08/14/2019  4:08 PM
+      08/14/2019  4:08 PM MST
 	</td>
 	<td>
 		<a href="/posts/nootracker_supplement_tracking_first_release">NooTracker - Supplement Tracking Software</a>
@@ -64,7 +67,7 @@
 	</tr>
 	<tr>
 	<td>
-      02/14/2019  2:25 PM
+      02/14/2019  2:25 PM MST
 	</td>
 	<td>
 		<a href="/posts/blog_ported_ruby_rails">Blog Ported to Ruby on Rails</a>
@@ -72,7 +75,7 @@
 	</tr>
 	<tr>
 	<td>
-      01/27/2019
+      01/28/2019 MST
 	</td>
 	<td>
 		<a href="/posts/debian_9_xfce4_terminal_coloring">Debian 9 xfce4-terminal Background Color Customization for Differentiating Root Elevation</a>
@@ -80,7 +83,7 @@
 	</tr>
 	<tr>
 	<td>
-      10/21/2017
+      10/22/2017 MST
 	</td>
 	<td>
 		<a href="/posts/plant_journaling_2017">Plant Journaling</a>
@@ -88,7 +91,7 @@
 	</tr>
 	<tr>
 	<td>
-      10/19/2017
+      10/20/2017 MST
 	</td>
 	<td>
 		<a href="/posts/new_site_open_source_story_telling">New Site Design &amp; Open-Source Story-telling Program Created</a>
@@ -96,7 +99,7 @@
 	</tr>
 	<tr>
 	<td>
-      07/15/2016
+      07/16/2016 MST
 	</td>
 	<td>
 		<a href="/posts/writing_music_reaper_komplete_10">Writing Music with Reaper and Komplete 10</a>
@@ -104,7 +107,7 @@
 	</tr>
 	<tr>
 	<td>
-      01/11/2016
+      01/12/2016 MST
 	</td>
 	<td>
 		<a href="/posts/html5_game_development_2016">HTML 5 Game Development Experiments</a>
@@ -112,7 +115,7 @@
 	</tr>
 	<tr>
 	<td>
-      01/07/2016
+      01/08/2016 MST
 	</td>
 	<td>
 		<a href="/posts/engineering_class_website_2016">Engineering Class Website Complete!</a>
@@ -120,7 +123,7 @@
 	</tr>
 	<tr>
 	<td>
-      10/21/2015
+      10/22/2015 MST
 	</td>
 	<td>
 		<a href="/posts/website_redesign">Website Redesign</a>
