@@ -125,7 +125,7 @@ function generateMap(level) {
 
 // Autodetect, create and append the renderer to the body element
 var renderer = PIXI.autoDetectRenderer(800, 600,
-  {backgroundColor: 0x000000, antialias: true});
+  {antialias: true}, false, true);
 document.body.appendChild(renderer.view);
 var container = new PIXI.Container();
 var graphics = new PIXI.Graphics();
@@ -153,57 +153,51 @@ function redrawGrid() {
 }
 
 // HUD
-var title = new PIXI.Text('', {
-  font: '24px Times New Roman',
-  fill: 'lime',
-});
+var title = new PIXI.Text('',
+  { fontFamily : 'Times New Roman', fontSize: 24, fill : 'lime', align : 'center'}
+);
 
 title.text = 'Peg Pilferer [v 0]';
 title.position.x = renderer.width - 205;
 title.position.y = 20;
 container.addChild(title);
 
-var levelText = new PIXI.Text('Lv: ' + level, {
-  font: '20px Times New Roman',
-  fill: 'lime',
-});
+var levelText = new PIXI.Text('Lv: ' + level,
+  { fontFamily : 'Times New Roman', fontSize: 20, fill : 'lime', align : 'center'}
+);
 
 levelText.position.x = renderer.width - 200;
 levelText.position.y = 60;
 container.addChild(levelText);
 
-var scoreText = new PIXI.Text('S: ' + score, {
-  font: '20px Times New Roman',
-  fill: 'lime',
-});
+var scoreText = new PIXI.Text('S: ' + score,
+  { fontFamily : 'Times New Roman', fontSize: 20, fill : 'lime', align : 'center'}
+);
 
 scoreText.position.x = renderer.width - 200;
 scoreText.position.y = 80;
 container.addChild(scoreText);
 
-var goalText = new PIXI.Text('Thr: SAFE', {
-  font: '20px Times New Roman',
-  fill: 'lime',
-});
+var goalText = new PIXI.Text('Thr: SAFE',
+  { fontFamily : 'Times New Roman', fontSize: 20, fill : 'lime', align : 'center'}
+);
 
 goalText.position.x = renderer.width - 200;
 goalText.position.y = 100;
 container.addChild(goalText);
 
 var diff = score - scoreThreshold;
-var diffText = new PIXI.Text('Diff: SAFE', {
-  font: '20px Times New Roman',
-  fill: 'lime',
-});
+var diffText = new PIXI.Text('Diff: SAFE',
+  { fontFamily : 'Times New Roman', fontSize: 20, fill : 'lime', align : 'center'}
+);
 
 diffText.position.x = renderer.width - 200;
 diffText.position.y = 120;
 container.addChild(diffText);
 
-var creditText = new PIXI.Text('E64', {
-  font: '20px Times New Roman',
-  fill: 'lime',
-});
+var creditText = new PIXI.Text('E64',
+  { fontFamily : 'Times New Roman', fontSize: 20, fill : 'lime', align : 'center'}
+);
 
 creditText.position.x = renderer.width - 200;
 creditText.position.y = renderer.height - 50;
