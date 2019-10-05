@@ -1,0 +1,42 @@
+/* line 13, /rails_static_builder/app/assets/stylesheets/actiontext.scss */
+.trix-content .attachment-gallery > action-text-attachment,
+.trix-content .attachment-gallery > .attachment {
+  flex: 1 0 33%;
+  padding: 0 0.5em;
+  max-width: 33%;
+}
+/* line 22, /rails_static_builder/app/assets/stylesheets/actiontext.scss */
+.trix-content .attachment-gallery.attachment-gallery--2 > action-text-attachment,
+.trix-content .attachment-gallery.attachment-gallery--2 > .attachment, .trix-content .attachment-gallery.attachment-gallery--4 > action-text-attachment,
+.trix-content .attachment-gallery.attachment-gallery--4 > .attachment {
+  flex-basis: 50%;
+  max-width: 50%;
+}
+/* line 31, /rails_static_builder/app/assets/stylesheets/actiontext.scss */
+.trix-content action-text-attachment .attachment {
+  padding: 0 !important;
+  max-width: 100% !important;
+}
+
+/* line 38, /rails_static_builder/app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-button {
+  background-color: white;
+  color: black;
+}
+
+/* line 44, /rails_static_builder/app/assets/stylesheets/actiontext.scss */
+span.trix-button-group:nth-child(3) {
+  visibility: hidden;
+}
+
+/* line 49, /rails_static_builder/app/assets/stylesheets/actiontext.scss */
+trix-toolbar {
+  width: 800px;
+}
+
+/* line 54, /rails_static_builder/app/assets/stylesheets/actiontext.scss */
+trix-editor {
+  background-color: white;
+  color: black;
+  width: 800px;
+}

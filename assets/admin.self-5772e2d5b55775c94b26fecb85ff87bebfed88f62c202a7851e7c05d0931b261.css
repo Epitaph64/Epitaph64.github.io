@@ -1,0 +1,29 @@
+/* line 6, /rails_static_builder/app/assets/stylesheets/admin.scss */
+#static-control-div table {
+  border-collapse: collapse;
+}
+/* line 9, /rails_static_builder/app/assets/stylesheets/admin.scss */
+#static-control-div table th {
+  font-size: 2em;
+}
+/* line 13, /rails_static_builder/app/assets/stylesheets/admin.scss */
+#static-control-div table tr td:nth-child(odd) {
+  background-color: #001d37;
+}
+/* line 17, /rails_static_builder/app/assets/stylesheets/admin.scss */
+#static-control-div table tr td:nth-child(even) {
+  background-color: #001b32;
+}
+/* line 21, /rails_static_builder/app/assets/stylesheets/admin.scss */
+#static-control-div table nobr {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+/* line 26, /rails_static_builder/app/assets/stylesheets/admin.scss */
+#static-control-div table td {
+  padding-left: 1em;
+  padding-right: 1em;
+  text-align: center;
+  padding-top: .3em;
+  padding-bottom: .3em;
+}

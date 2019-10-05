@@ -1,0 +1,83 @@
+/* line 4, /rails_static_builder/app/assets/stylesheets/posts.scss */
+.div-post-admin {
+  max-width: 80%;
+}
+/* line 7, /rails_static_builder/app/assets/stylesheets/posts.scss */
+.div-post-admin td:nth-child(2) {
+  min-width: 20%;
+}
+/* line 11, /rails_static_builder/app/assets/stylesheets/posts.scss */
+.div-post-admin trix-editor {
+  padding: 1em;
+}
+/* line 15, /rails_static_builder/app/assets/stylesheets/posts.scss */
+.div-post-admin output, .div-post-admin input {
+  color: white;
+}
+/* line 19, /rails_static_builder/app/assets/stylesheets/posts.scss */
+.div-post-admin button {
+  background-color: white;
+}
+/* line 23, /rails_static_builder/app/assets/stylesheets/posts.scss */
+.div-post-admin trix-toolbar .trix-button {
+  background-color: white;
+}
+/* line 27, /rails_static_builder/app/assets/stylesheets/posts.scss */
+.div-post-admin table {
+  border-collapse: collapse;
+}
+/* line 30, /rails_static_builder/app/assets/stylesheets/posts.scss */
+.div-post-admin table th {
+  font-size: 2em;
+}
+/* line 34, /rails_static_builder/app/assets/stylesheets/posts.scss */
+.div-post-admin table tr td:nth-child(odd) {
+  background-color: #001d37;
+}
+/* line 38, /rails_static_builder/app/assets/stylesheets/posts.scss */
+.div-post-admin table tr td:nth-child(even) {
+  background-color: #001b32;
+}
+/* line 42, /rails_static_builder/app/assets/stylesheets/posts.scss */
+.div-post-admin table nobr {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+/* line 47, /rails_static_builder/app/assets/stylesheets/posts.scss */
+.div-post-admin table td {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+/* line 52, /rails_static_builder/app/assets/stylesheets/posts.scss */
+.div-post-admin table td:nth-child(1) {
+  text-align: right;
+}
+
+/* line 59, /rails_static_builder/app/assets/stylesheets/posts.scss */
+.post_show_table {
+  margin-left: -1.5em;
+  border-collapse: collapse;
+}
+/* line 63, /rails_static_builder/app/assets/stylesheets/posts.scss */
+.post_show_table td {
+  padding: .3em;
+}
+/* line 67, /rails_static_builder/app/assets/stylesheets/posts.scss */
+.post_show_table td:nth-child(1) {
+  text-align: center;
+}
+
+/* line 73, /rails_static_builder/app/assets/stylesheets/posts.scss */
+img {
+  width: 100%;
+}
+
+/* line 76, /rails_static_builder/app/assets/stylesheets/posts.scss */
+.half-size {
+  max-width: 50%;
+}
+
+/* line 80, /rails_static_builder/app/assets/stylesheets/posts.scss */
+ruby {
+  float: none;
+}

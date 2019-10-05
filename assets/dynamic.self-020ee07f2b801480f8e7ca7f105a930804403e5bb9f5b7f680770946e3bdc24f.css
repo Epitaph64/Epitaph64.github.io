@@ -1,0 +1,4 @@
+/* line 1, /rails_static_builder/app/assets/stylesheets/dynamic.scss */
+.hide-dynamic {
+  visibility: hidden;
+}
